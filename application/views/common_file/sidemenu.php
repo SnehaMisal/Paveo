@@ -63,6 +63,7 @@
                 Dashboards
             </a>
         </li>
+        <!--  Staff Management -->
         <li class="menu-item <?php if($y=="staff_management"){ echo "active open";}?>">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-user"></i>
@@ -101,20 +102,20 @@
             </ul>
         </li>
         <!-- Order Management -->
-        <li class="menu-item ">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <li class="menu-item <?php if($y=="order_managment"){ echo "active open";}?>">
+            <a href="javascript:void(0);" class="menu-link menu-toggle ">
                 <i class="menu-icon tf-icons bx bx-cart"></i>
                 Order Management
             </a>
             <ul class="menu-sub">
-                <li class="menu-item ">
-                    <a href="#" class="menu-link">
+                <li class="menu-item <?php if($x=="new_order"){ echo "active";}?>">
+                    <a href="<?php echo base_url('new_order') ?>" class="menu-link ">
                         New Order
                     </a>
                 </li>
                 <li class="menu-item ">
                     <a href="#" class="menu-link">
-                        Pending Orders
+                        In-Process Orders
                     </a>
                 </li>
                 <li class="menu-item">
@@ -136,14 +137,38 @@
                 Product Management
             </a>
             <ul class="menu-sub">
+                <li class="menu-item <?php if($x=="add_product"){ echo "active";}?>">
+                    <a href="<?php echo base_url('add_product') ?>" class="menu-link">
+                        Add Product
+                    </a>
+                </li>
+                <li class="menu-item <?php if($x=="product_list"){ echo "active";}?>">
+                    <a href="<?php echo base_url('product_list') ?>" class="menu-link">
+                        Product List
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!-- Setting-->
+        <li class="menu-item <?php if($y=="setting"){ echo "active open";}?>">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-package"></i>
+                Setting
+            </a>
+            <ul class="menu-sub">
                 <li class="menu-item <?php if($x=="create_category"){ echo "active";}?>">
                     <a href="<?php echo base_url('create_category') ?>" class="menu-link">
                         Create Category
                     </a>
                 </li>
-                <li class="menu-item ">
-                    <a href="#" class="menu-link">
-                         Product List
+                <li class="menu-item <?php if($x=="create_size"){ echo "active";}?>">
+                    <a href="<?php echo base_url('create_size') ?>" class="menu-link">
+                        Create Size
+                    </a>
+                </li>
+                <li class="menu-item <?php if($x=="create_color"){ echo "active";}?>">
+                    <a href="<?php echo base_url('create_color') ?>" class="menu-link">
+                        Create Color
                     </a>
                 </li>
             </ul>

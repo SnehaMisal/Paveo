@@ -240,12 +240,22 @@
 .product-box img {
     width: 55px;
     height: 55px;
+    object-fit: contain;
     border-radius: 0.25rem;
-    border: 1px solid #e2e3e4;
-    background-color: #ffffff;
+    /* border: 1px solid #e2e3e4;
+    background-color: #ffffff; */
 }
 
 
 /* .product-box img {
     width: 100%;
 } */
+
+.product-box {
+    text-align: center;
+    text-align: -webkit-center;
+}
+
+input[type="color"] {
+    padding: 0.2rem 0.4rem;
+}

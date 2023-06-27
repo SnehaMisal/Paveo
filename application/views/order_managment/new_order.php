@@ -12,18 +12,19 @@
 
 <body>
     <?php
-    $y="setting";
-    $x="create_category"
+    $y="order_managment";
+    $x="new_order"
     
     ?>
     <div class="layout-wrapper layout-content-navbar  ">
         <div class="layout-container">
             <!-- Menu -->
-            <?php include 'common_file/sidemenu.php'?>
+            <?php include 'application/views/common_file/sidemenu.php'?>
             <!-- / Menu -->
             <!-- Layout container -->
             <div class="layout-page">
-                <?php include 'common_file/header.php'?>
+            <?php include 'application/views/common_file/header.php'?>
+
                 <!-- Content wrapper -->
                 <div class="content-wrapper">
                     <div class="container-xxl flex-grow-1 container-p-y">
@@ -181,7 +182,7 @@
                         </div>
                     </div>
                     <!-- Footer -->
-                    <?php include 'common_file/footer.php'?>
+                    <?php $this->load->view('common_file/footer.php'); ?>
                     <!-- / Footer -->
                     <div class="content-backdrop fade"></div>
                 </div>
@@ -217,8 +218,8 @@
                             <div class="col mb-3">
                                 <label for="" class="form-label">Category Image <span
                                         class="text-danger">*</span></label>
-                                <input type="file" id="" class="dropify" name="" data-default-file=""
-                                    data-height="150" required data-allowed-file-extensions="png jpg mp4" />
+                                <input type="file" id="" class="dropify" name="" data-default-file="" data-height="150"
+                                    required data-allowed-file-extensions="png jpg mp4" />
                                 <div class="invalid-feedback">Please Enter Category Image.</div>
                             </div>
                         </div>
@@ -245,8 +246,8 @@
                             <div class="col mb-3">
                                 <label for="" class="form-label">Category Name <span
                                         class="text-danger">*</span></label>
-                                <input type="text" id="" class="form-control" placeholder="Enter Category Name" value="Shirts"
-                                    required>
+                                <input type="text" id="" class="form-control" placeholder="Enter Category Name"
+                                    value="Shirts" required>
                                 <div class="invalid-feedback"> Please enter your Category name. </div>
                             </div>
                         </div>
@@ -254,7 +255,8 @@
                             <div class="col mb-3">
                                 <label for="" class="form-label">Category Image <span
                                         class="text-danger">*</span></label>
-                                <input type="file" id="" class="dropify" name="" data-default-file="<?php echo base_url() ?>assets/images/cat_shirt.png"
+                                <input type="file" id="" class="dropify" name=""
+                                    data-default-file="<?php echo base_url() ?>assets/images/cat_shirt.png"
                                     data-height="150" required data-allowed-file-extensions="png jpg mp4" />
                                 <div class="invalid-feedback">Please Enter Category Image.</div>
                             </div>
@@ -268,6 +270,7 @@
             </div>
         </div>
     </div>
+
     <?php $this->load->view('link/js'); ?>
     <script>
     function delete_fun(idd) {

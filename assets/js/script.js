@@ -13,6 +13,21 @@
         l.closest(".card").block({ message: '<div class="sk-fold sk-primary"><div class="sk-fold-cube"></div><div class="sk-fold-cube"></div><div class="sk-fold-cube"></div><div class="sk-fold-cube"></div></div><h5>LOADING...</h5>', css: { backgroundColor: "transparent", border: "0" }, overlayCSS: { backgroundColor: $("html").hasClass("dark-style") ? "#000" : "#fff", opacity: .55 } }), setTimeout(function() { l.closest(".card").unblock(), l.closest(".card").find(".card-alert").length && l.closest(".card").find(".card-alert").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button><strong>Holy grail!</strong> Your success/error message here.</div>') }, 2500)
     })
 });
+(function() {
+    'use strict';
+    window.addEventListener('load', function() {
+        var forms = document.getElementsByClassName('needs-validation');
+        var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
 $(document).ready(function() {
         // Datatable Js
         $('#data_table').DataTable({
@@ -20,6 +35,16 @@ $(document).ready(function() {
             "info": false,
             "searching": false
         });
+        // Dropify image
+        $('.dropify').dropify();
+        jQuery(".product-box").length > 0 && $(".product-box").lightGallery({
+            loop: !0,
+            thumbnail: !0,
+            exThumbImage: "data-exthumbimage",
+            download: false,
+            share: false,
+        });
+
     })
     // Magnify Image
     // $('.image-popup-vertical-fit').magnificPopup({

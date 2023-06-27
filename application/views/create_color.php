@@ -6,15 +6,14 @@
     <meta charset="utf-8" />
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    <title>Paveo | Create Category</title>
+    <title>Paveo | Create Color</title>
     <?php $this->load->view('link/css'); ?>
 </head>
 
 <body>
     <?php
     $y="setting";
-    $x="create_category"
-    
+    $x="create_color"
     ?>
     <div class="layout-wrapper layout-content-navbar  ">
         <div class="layout-container">
@@ -28,7 +27,7 @@
                 <div class="content-wrapper">
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <h4 class="fw-bold py-2 mb-2">
-                            Create Category
+                            Create Color
                         </h4>
                         <div class="row ">
                             <div class="col-md-12">
@@ -36,8 +35,8 @@
                                     <div class="card-header header-elements">
                                         <div class="card-title-elements">
                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                data-bs-target="#create_category">
-                                                <i class="bx bx-plus"></i>Add New Category
+                                                data-bs-target="#create_color">
+                                                <i class="bx bx-plus"></i>Add New Color
                                             </button>
                                         </div>
                                         <div class="card-header-elements ms-auto">
@@ -52,7 +51,8 @@
                                                 <tr>
                                                     <th>SR NO</th>
                                                     <th>Category Name</th>
-                                                    <th>Category Image</th>
+                                                    <th>Color Name</th>
+                                                    <th>Color Code</th>
                                                     <th>Status</th>
                                                     <th>Actions</th>
                                                 </tr>
@@ -60,18 +60,9 @@
                                             <tbody>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td><span class="fw-semibold">Shirts</span></td>
-                                                    <td>
-                                                        <div class="product-box">
-                                                            <a href="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                data-exthumbimage="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                data-src="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                class=" mb-4">
-                                                                <img src="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                    class="img-thumbnail" alt="" />
-                                                            </a>
-                                                        </div>
-                                                    </td>
+                                                    <td>Shirts</td>
+                                                    <td><span class="fw-semibold"><span class="badge badge-dot  me-1" style="background-color:#ff3e1d"></span>Red</span></td>
+                                                    <td><span class="fw-semibold"></span>#ff3e1d</td>
                                                     <td><input type="checkbox" checked data-toggle="toggle"
                                                             data-on="Active" data-off="Deactive" data-onstyle="success"
                                                             data-offstyle="danger" data-size="sm">
@@ -81,7 +72,7 @@
                                                             <button class="btn btn-sm btn-icon"><i
                                                                     class="bx bx-show"></i></button>
                                                             <button type="button" class="btn btn-sm btn-icon"
-                                                                data-bs-toggle="modal" data-bs-target="#edit_category">
+                                                                data-bs-toggle="modal" data-bs-target="#edit_color">
                                                                 <i class="bx bx-edit"></i>
                                                             </button>
                                                             <button class="btn btn-sm btn-icon delete-record"
@@ -92,18 +83,9 @@
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td><span class="fw-semibold">Jeans</span></td>
-                                                    <td>
-                                                        <div class="product-box">
-                                                            <a href="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                data-exthumbimage="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                data-src="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                class=" mb-4">
-                                                                <img src="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                    class="img-thumbnail" alt="" />
-                                                            </a>
-                                                        </div>
-                                                    </td>
+                                                    <td>Jeans</td>
+                                                    <td><span class="fw-semibold"><span class="badge badge-dot  me-1" style="background-color:#435971cc"></span>Grey</span></td>
+                                                    <td><span class="fw-semibold">#435971cc</span></td>
                                                     <td>
                                                         <input type="checkbox" data-toggle="toggle" data-on="Active"
                                                             data-off="Deactive" data-onstyle="success"
@@ -123,18 +105,9 @@
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
-                                                    <td><span class="fw-semibold">Shorts</span></td>
-                                                    <td>
-                                                        <div class="product-box">
-                                                            <a href="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                data-exthumbimage="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                data-src="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                class=" mb-4">
-                                                                <img src="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                    class="img-thumbnail" alt="" />
-                                                            </a>
-                                                        </div>
-                                                    </td>
+                                                    <td>Shorts</td>
+                                                    <td><span class="fw-semibold"><span class="badge badge-dot  me-1" style="background-color:#007bff"></span>Blue</span></td>
+                                                    <td><span class="fw-semibold">#007bff</span></td>
                                                     <td>
                                                         <input type="checkbox" checked data-toggle="toggle"
                                                             data-on="Active" data-off="Deactive" data-onstyle="success"
@@ -194,32 +167,43 @@
         <!-- Drag Target Area To SlideIn Menu On Small Screens -->
         <div class="drag-target"></div>
     </div>
-    <!--Create Category Modal -->
-    <div class="modal fade" id="create_category" tabindex="-1" aria-hidden="true">
+    <!--Create Color Modal -->
+    <div class="modal fade" id="create_color" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <form action="" method="post" class="needs-validation" novalidate>
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel1">Create Category</h5>
+                        <h5 class="modal-title" id="exampleModalLabel1">Create Color</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
+                        <div class="col mb-3">
+                            <label for="cat_name" class="form-label">Category Name <span
+                                    class="text-danger">*</span></label>
+                            <select class="form-select" id="cat_name" required="" name="">
+                                <option selected="" disabled="" value="">Choose...</option>
+                                <option value="1">Shirts</option>
+                                <option value="2">Jeans </option>
+                                <option value="3">Shorts </option>
+                            </select>
+                            <div class="invalid-feedback"> Please enter your Category Name. </div>
+                        </div>
                         <div class="row">
                             <div class="col mb-3">
-                                <label for="" class="form-label">Category Name <span
+                                <label for="" class="form-label">Color Name <span
                                         class="text-danger">*</span></label>
-                                <input type="text" id="" class="form-control" placeholder="Enter Category Name" value=""
+                                <input type="text" id="" class="form-control" placeholder="Enter Color Name" value=""
                                     required>
-                                <div class="invalid-feedback"> Please enter your Category name. </div>
+                                <div class="invalid-feedback"> Please enter your Color Name. </div>
                             </div>
                         </div>
-                        <div class="row g-2">
+                        <div class="row">
                             <div class="col mb-3">
-                                <label for="" class="form-label">Category Image <span
+                                <label for="" class="form-label">Color Code <span
                                         class="text-danger">*</span></label>
-                                <input type="file" id="" class="dropify" name="" data-default-file=""
-                                    data-height="150" required data-allowed-file-extensions="png jpg mp4" />
-                                <div class="invalid-feedback">Please Enter Category Image.</div>
+                                <input type="color" id="" class="form-control" placeholder="" value=""
+                                    required>
+                                <div class="invalid-feedback"> Please enter your Color Code. </div>
                             </div>
                         </div>
                     </div>
@@ -231,32 +215,45 @@
             </div>
         </div>
     </div>
-    <!--Edit Category Modal -->
-    <div class="modal fade" id="edit_category" tabindex="-1" aria-hidden="true">
+    <!--Edit Color Modal -->
+    <div class="modal fade" id="edit_color" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <form action="" method="post" class="needs-validation" novalidate>
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel1">Edit Category</h5>
+                        <h5 class="modal-title" id="exampleModalLabel1">Edit Color</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="row">
                             <div class="col mb-3">
-                                <label for="" class="form-label">Category Name <span
+                                <label for="cat_name" class="form-label">Category Name <span
                                         class="text-danger">*</span></label>
-                                <input type="text" id="" class="form-control" placeholder="Enter Category Name" value="Shirts"
-                                    required>
-                                <div class="invalid-feedback"> Please enter your Category name. </div>
+                                <select class="form-select" id="cat_name" required="" name="">
+                                    <option selected="" disabled="" value="">Choose...</option>
+                                    <option value="1">Shirts</option>
+                                    <option value="2" selected>Jeans </option>
+                                    <option value="3">Shorts </option>
+                                </select>
+                                <div class="invalid-feedback"> Please enter your name. </div>
                             </div>
                         </div>
-                        <div class="row g-2">
+                        <div class="row">
                             <div class="col mb-3">
-                                <label for="" class="form-label">Category Image <span
+                                <label for="" class="form-label">Color Name <span
                                         class="text-danger">*</span></label>
-                                <input type="file" id="" class="dropify" name="" data-default-file="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                    data-height="150" required data-allowed-file-extensions="png jpg mp4" />
-                                <div class="invalid-feedback">Please Enter Category Image.</div>
+                                <input type="text" id="" class="form-control" placeholder="Enter Color Name" value="S"
+                                    required>
+                                <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mb-3">
+                                <label for="" class="form-label">Color Code <span
+                                        class="text-danger">*</span></label>
+                                <input type="color" id="" class="form-control" placeholder="" value="#ff3e1d"
+                                    required>
+                                <div class="invalid-feedback"> Please enter your Color Code. </div>
                             </div>
                         </div>
                     </div>

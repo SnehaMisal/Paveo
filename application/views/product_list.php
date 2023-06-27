@@ -6,15 +6,14 @@
     <meta charset="utf-8" />
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    <title>Paveo | Create Category</title>
+    <title>Paveo | Product List</title>
     <?php $this->load->view('link/css'); ?>
 </head>
 
 <body>
     <?php
-    $y="setting";
-    $x="create_category"
-    
+    $y="vendor_managment";
+    $x="pending_approval"
     ?>
     <div class="layout-wrapper layout-content-navbar  ">
         <div class="layout-container">
@@ -28,22 +27,91 @@
                 <div class="content-wrapper">
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <h4 class="fw-bold py-2 mb-2">
-                            Create Category
+                            Product List
                         </h4>
+                        <div class="row g-4 mb-4">
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start justify-content-between">
+                                            <div class="content-left">
+                                                <span>Total Request</span>
+                                                <div class="d-flex align-items-end mt-2">
+                                                    <h4 class="mb-0 me-2">21,459</h4>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-label-success rounded p-2">
+                                                <i class="bx bx-user bx-sm"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start justify-content-between">
+                                            <div class="content-left">
+                                                <span>New Request</span>
+                                                <div class="d-flex align-items-end mt-2">
+                                                    <h4 class="mb-0 me-2">21,459</h4>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-label-primary rounded p-2">
+                                                <i class="bx bx-user-plus bx-sm"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start justify-content-between">
+                                            <div class="content-left">
+                                                <span>Pending Request</span>
+                                                <div class="d-flex align-items-end mt-2">
+                                                    <h4 class="mb-0 me-2">4,567</h4>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-label-warning rounded p-2">
+                                                <i class="bx bx-user-voice bx-sm"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start justify-content-between">
+                                            <div class="content-left">
+                                                <span>Rejected Request</span>
+                                                <div class="d-flex align-items-end mt-2">
+                                                    <h4 class="mb-0 me-2">19,860</h4>
+                                                </div>
+                                            </div>
+                                            <span class="badge bg-label-danger rounded p-2">
+                                                <i class="bx bx-group bx-sm"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row ">
                             <div class="col-md-12">
                                 <div class=" card">
                                     <div class="card-header header-elements">
-                                        <div class="card-title-elements">
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                data-bs-target="#create_category">
-                                                <i class="bx bx-plus"></i>Add New Category
-                                            </button>
+                                        <div class="input-group  w-auto">
+                                            <input type="text" name="daterange" id="daterange" value=""
+                                                class="form-control w-auto">
+                                            <button class="btn btn-md btn-primary" type="button">Go</button>
                                         </div>
+                                        <!-- <input type="text" name="daterange" value="" class="form-control w-auto" /> -->
                                         <div class="card-header-elements ms-auto">
                                             <input type="text" class="form-control w-auto" placeholder="Search">
-                                            <button type="button" class="btn btn-md btn-primary"><i
-                                                    class="bx bx-search"></i></button>
+                                            <button type="button" class="btn btn-md btn-primary">Go</button>
                                         </div>
                                     </div>
                                     <div class="card-datatable table-responsive">
@@ -52,7 +120,10 @@
                                                 <tr>
                                                     <th>SR NO</th>
                                                     <th>Category Name</th>
-                                                    <th>Category Image</th>
+                                                    <th>Product Name</th>
+                                                    <th>Image</th>
+                                                    <th>Price</th>
+                                                    <th>Offer</th>
                                                     <th>Status</th>
                                                     <th>Actions</th>
                                                 </tr>
@@ -61,80 +132,20 @@
                                                 <tr>
                                                     <td>1</td>
                                                     <td><span class="fw-semibold">Shirts</span></td>
+                                                    <td><span class="fw-semibold">Summer Wear Shirt for Men</span></td>
                                                     <td>
                                                         <div class="product-box">
-                                                            <a href="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                data-exthumbimage="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                data-src="<?php echo base_url() ?>assets/images/cat_shirt.png"
+                                                            <a href="<?php echo base_url() ?>assets/images/shirt.jpg"
+                                                                data-exthumbimage="<?php echo base_url() ?>assets/images/shirt.jpg"
+                                                                data-src="<?php echo base_url() ?>assets/images/shirt.jpg"
                                                                 class=" mb-4">
-                                                                <img src="<?php echo base_url() ?>assets/images/cat_shirt.png"
+                                                                <img src="<?php echo base_url() ?>assets/images/shirt.jpg"
                                                                     class="img-thumbnail" alt="" />
                                                             </a>
                                                         </div>
                                                     </td>
-                                                    <td><input type="checkbox" checked data-toggle="toggle"
-                                                            data-on="Active" data-off="Deactive" data-onstyle="success"
-                                                            data-offstyle="danger" data-size="sm">
-                                                    </td>
-                                                    <td>
-                                                        <div class="d-inline-block text-nowrap">
-                                                            <button class="btn btn-sm btn-icon"><i
-                                                                    class="bx bx-show"></i></button>
-                                                            <button type="button" class="btn btn-sm btn-icon"
-                                                                data-bs-toggle="modal" data-bs-target="#edit_category">
-                                                                <i class="bx bx-edit"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-icon delete-record"
-                                                                id="delete_1" onclick="delete_fun(this)"><i
-                                                                    class="bx bx-trash"></i></button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td><span class="fw-semibold">Jeans</span></td>
-                                                    <td>
-                                                        <div class="product-box">
-                                                            <a href="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                data-exthumbimage="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                data-src="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                class=" mb-4">
-                                                                <img src="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                    class="img-thumbnail" alt="" />
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <input type="checkbox" data-toggle="toggle" data-on="Active"
-                                                            data-off="Deactive" data-onstyle="success"
-                                                            data-offstyle="danger" data-size="sm">
-                                                    </td>
-                                                    <td>
-                                                        <div class="d-inline-block text-nowrap">
-                                                            <button class="btn btn-sm btn-icon"><i
-                                                                    class="bx bx-show"></i></button>
-                                                            <button class="btn btn-sm btn-icon"><i
-                                                                    class="bx bx-edit"></i></button>
-                                                            <button class="btn btn-sm btn-icon delete-record"
-                                                                id="delete_2" onclick="delete_fun(this)"><i
-                                                                    class="bx bx-trash"></i></button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td><span class="fw-semibold">Shorts</span></td>
-                                                    <td>
-                                                        <div class="product-box">
-                                                            <a href="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                data-exthumbimage="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                data-src="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                class=" mb-4">
-                                                                <img src="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                                                    class="img-thumbnail" alt="" />
-                                                            </a>
-                                                        </div>
-                                                    </td>
+                                                    <td>1,999</td>
+                                                    <td>86%</td>
                                                     <td>
                                                         <input type="checkbox" checked data-toggle="toggle"
                                                             data-on="Active" data-off="Deactive" data-onstyle="success"
@@ -147,7 +158,75 @@
                                                             <button class="btn btn-sm btn-icon"><i
                                                                     class="bx bx-edit"></i></button>
                                                             <button class="btn btn-sm btn-icon delete-record"
-                                                                id="delete_3" onclick="delete_fun(this)"><i
+                                                                id="delete_1" onclick="delete_fun(this)"><i
+                                                                    class="bx bx-trash"></i></button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td><span class="fw-semibold">Jeans</span></td>
+                                                    <td><span class="fw-semibold">Ben Martin Men's Relaxed Fit Jeans</span></td>
+                                                    <td>
+                                                        <div class="product-box">
+                                                            <a href="<?php echo base_url() ?>assets/images/jeans.jpg"
+                                                                data-exthumbimage="<?php echo base_url() ?>assets/images/jeans.jpg"
+                                                                data-src="<?php echo base_url() ?>assets/images/jeans.jpg"
+                                                                class=" mb-4">
+                                                                <img src="<?php echo base_url() ?>assets/images/jeans.jpg"
+                                                                    class="img-thumbnail" alt="" />
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>2,499</td>
+                                                    <td>75%</td>
+                                                    <td>
+                                                        <input type="checkbox" checked data-toggle="toggle"
+                                                            data-on="Active" data-off="Deactive" data-onstyle="success"
+                                                            data-offstyle="danger" data-size="sm">
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-inline-block text-nowrap">
+                                                            <button class="btn btn-sm btn-icon"><i
+                                                                    class="bx bx-show"></i></button>
+                                                            <button class="btn btn-sm btn-icon"><i
+                                                                    class="bx bx-edit"></i></button>
+                                                            <button class="btn btn-sm btn-icon delete-record"
+                                                                id="delete_1" onclick="delete_fun(this)"><i
+                                                                    class="bx bx-trash"></i></button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td><span class="fw-semibold">Suits & Blazers</span></td>
+                                                    <td><span class="fw-semibold">Peter England Men Blazer</span></td>
+                                                    <td>
+                                                        <div class="product-box">
+                                                            <a href="<?php echo base_url() ?>assets/images/blazer.jpg"
+                                                                data-exthumbimage="<?php echo base_url() ?>assets/images/blazer.jpg"
+                                                                data-src="<?php echo base_url() ?>assets/images/blazer.jpg"
+                                                                class=" mb-4">
+                                                                <img src="<?php echo base_url() ?>assets/images/blazer.jpg"
+                                                                    class="img-thumbnail" alt="" />
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>2,499</td>
+                                                    <td>75%</td>
+                                                    <td>
+                                                        <input type="checkbox" checked data-toggle="toggle"
+                                                            data-on="Active" data-off="Deactive" data-onstyle="success"
+                                                            data-offstyle="danger" data-size="sm">
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-inline-block text-nowrap">
+                                                            <button class="btn btn-sm btn-icon"><i
+                                                                    class="bx bx-show"></i></button>
+                                                            <button class="btn btn-sm btn-icon"><i
+                                                                    class="bx bx-edit"></i></button>
+                                                            <button class="btn btn-sm btn-icon delete-record"
+                                                                id="delete_1" onclick="delete_fun(this)"><i
                                                                     class="bx bx-trash"></i></button>
                                                         </div>
                                                     </td>
@@ -194,103 +273,34 @@
         <!-- Drag Target Area To SlideIn Menu On Small Screens -->
         <div class="drag-target"></div>
     </div>
-    <!--Create Category Modal -->
-    <div class="modal fade" id="create_category" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <form action="" method="post" class="needs-validation" novalidate>
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel1">Create Category</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col mb-3">
-                                <label for="" class="form-label">Category Name <span
-                                        class="text-danger">*</span></label>
-                                <input type="text" id="" class="form-control" placeholder="Enter Category Name" value=""
-                                    required>
-                                <div class="invalid-feedback"> Please enter your Category name. </div>
-                            </div>
-                        </div>
-                        <div class="row g-2">
-                            <div class="col mb-3">
-                                <label for="" class="form-label">Category Image <span
-                                        class="text-danger">*</span></label>
-                                <input type="file" id="" class="dropify" name="" data-default-file=""
-                                    data-height="150" required data-allowed-file-extensions="png jpg mp4" />
-                                <div class="invalid-feedback">Please Enter Category Image.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!--Edit Category Modal -->
-    <div class="modal fade" id="edit_category" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <form action="" method="post" class="needs-validation" novalidate>
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel1">Edit Category</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col mb-3">
-                                <label for="" class="form-label">Category Name <span
-                                        class="text-danger">*</span></label>
-                                <input type="text" id="" class="form-control" placeholder="Enter Category Name" value="Shirts"
-                                    required>
-                                <div class="invalid-feedback"> Please enter your Category name. </div>
-                            </div>
-                        </div>
-                        <div class="row g-2">
-                            <div class="col mb-3">
-                                <label for="" class="form-label">Category Image <span
-                                        class="text-danger">*</span></label>
-                                <input type="file" id="" class="dropify" name="" data-default-file="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                    data-height="150" required data-allowed-file-extensions="png jpg mp4" />
-                                <div class="invalid-feedback">Please Enter Category Image.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
     <?php $this->load->view('link/js'); ?>
     <script>
-    function delete_fun(idd) {
-        var id = idd.id;
-        console.log("id", id);
-        Swal.fire({
-            title: 'Are you sure?',
-            text: "Once deleted, you will not be able to recover this  file!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                Swal.fire(
-                    'Deleted!',
-                    'Your file has been deleted.',
-                    'success'
-                )
+    $(function() {
+        var start = moment();
+        var end = moment();
+        var max_date = moment();
+
+        function cb(start, end) {
+            $('#daterange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format(
+                'MMMM D, YYYY'));
+        }
+        $('#daterange').daterangepicker({
+            startDate: start,
+            endDate: end,
+            maxDate: max_date,
+            ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment()
+                    .subtract(1, 'month').endOf('month')
+                ]
             }
-        })
-    };
+        }, cb);
+        cb(start, end);
+    });
     </script>
 </body>
 

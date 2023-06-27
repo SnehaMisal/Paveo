@@ -82,4 +82,24 @@ class PageController extends CI_Controller
 	{
 		$this->load->view('create_category');
 	}
+	public function create_size()
+	{
+		$this->load->view('create_size');
+	}
+	public function create_color()
+	{
+		$this->load->view('create_color');
+	}
+	public function add_product()
+	{
+		$this->load->view('add_product');
+	}
+	public function product_list()
+	{
+		$this->load->view('product_list');
+	}
+	public function new_order()
+	{
+		$this->load->view('order_managment/new_order');
+	}
 }
