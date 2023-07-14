@@ -32,7 +32,7 @@
     <script src="<?php echo base_url() ?>assets/plugins/quill/katex.js"></script>
     <script src="<?php echo base_url() ?>assets/plugins/quill/quill.js"></script>
     <!-- <script src="<?php echo base_url() ?>assets/plugins/bootstrap-select/bootstrap-select.js"></script> -->
-    <!-- <script src="<?php echo base_url() ?>assets/plugins/select2/select2.js"></script> -->
+    <script src="<?php echo base_url() ?>assets/plugins/select2/select2.js"></script>
     <script src="<?php echo base_url() ?>assets/plugins/daterangepicker/moment.min.js"></script>
     <script src="<?php echo base_url() ?>assets/plugins/daterangepicker/daterangepicker.js"></script>
     <script src="<?php echo base_url() ?>assets/plugins/datatables/datatables.bundle.js"></script>
@@ -41,6 +41,9 @@
 <!--lightgallery js  -->
 <script src="<?php echo base_url() ?>assets/plugins/lightgallery/js/lightgallery-all.min.js"></script>
 <!-- dropify js -->
-<script src="<?php echo base_url() ?>assets/plugins/dropify/js/dropify.js"></script>    
+<script src="<?php echo base_url() ?>assets/plugins/dropify/js/dropify.js"></script>  
+<script type="text/javascript" src="<?php echo base_url() ?>assets/plugins/image_upload/imageuploadify.min.js">
+    </script>  
+    <script src="<?php echo base_url() ?>assets/plugins/apex-chart/apex-chart.js"></script>
 <script src="<?php echo base_url() ?>assets/js/main.js"></script>
     <script src="<?php echo base_url() ?>assets/js/script.js"></script>

@@ -4,8 +4,9 @@
 ******************************************************************************/
 
 .menu .app-brand.demo {
-    height: 64px;
+    /* height: 64px; */
     margin-top: 12px;
+    margin-bottom: 10px;
 }
 
 .app-brand-logo.demo svg {
@@ -246,6 +247,13 @@
     background-color: #ffffff; */
 }
 
+.orderlist .product-box img {
+    width: 65px;
+    height: 65px;
+    /* border: 1px solid #e2e3e4;
+    background-color: #ffffff; */
+}
+
 
 /* .product-box img {
     width: 100%;
@@ -258,4 +266,501 @@
 
 input[type="color"] {
     padding: 0.2rem 0.4rem;
+}
+
+
+/* order Details */
+
+.icon-box {
+    /* width: 60px;
+    height: 60px; */
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #c7c8cb;
+    font-size: 26px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.icon-box i {
+    font-size: 1.6rem
+}
+
+.bg-light-primary {
+    background-color: rgba(52, 96, 255, 0.22)!important;
+}
+
+.bg-light-success {
+    background-color: rgb(18 191 35 / 22%)!important;
+}
+
+.bg-light-danger {
+    background-color: rgb(231 46 46 / 22%)!important;
+}
+
+
+/* .orderlist .product-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    border: 1px solid #e2e3e4;
+    background-color: #ffffff;
+} */
+
+.oder_card .card-body {
+    /* min-height: 160px; */
+    overflow: auto;
+    padding: 10px;
+}
+
+
+/* Invoice */
+
+.invoice {
+    position: relative;
+    background-color: #fff;
+    min-height: 680px;
+    padding: 15px;
+}
+
+.invoice header {
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #5e72e4;
+}
+
+.invoice .company-details {
+    text-align: right;
+}
+
+.invoice .company-details .name {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.invoice main {
+    padding-bottom: 50px;
+}
+
+.invoice footer {
+    width: 100%;
+    text-align: center;
+    color: #777;
+    border-top: 1px solid #aaa;
+    padding: 8px 0;
+}
+
+.invoice .contacts {
+    margin-bottom: 20px;
+}
+
+.invoice .invoice-to {
+    text-align: left;
+}
+
+.invoice .invoice-details {
+    text-align: right;
+}
+
+.invoice .invoice-to .to {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.invoice .invoice-details .invoice-id {
+    margin-top: 0;
+    color: #5e72e4;
+}
+
+.invoice main .thanks {
+    margin-top: -100px;
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+
+.invoice table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 20px;
+}
+
+.invoice table th {
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.invoice table td,
+.invoice table th {
+    padding: 15px;
+    background: #eee;
+    border-bottom: 1px solid #fff;
+}
+
+.invoice table .no {
+    color: #fff;
+    font-size: 1.6em;
+    background: #5e72e4;
+}
+
+.invoice table .unit {
+    background: #ddd;
+}
+
+.invoice table .qty,
+.invoice table .total,
+.invoice table .unit {
+    text-align: right;
+    font-size: 1.2em;
+}
+
+.invoice table .total {
+    background: #5e72e4;
+    color: #fff;
+}
+
+.invoice table tfoot tr td:first-child {
+    border: none;
+}
+
+.invoice table tfoot tr:first-child td {
+    border-top: none;
+}
+
+.invoice table tfoot td {
+    background: 0 0;
+    border-bottom: none;
+    white-space: nowrap;
+    text-align: right;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-top: 1px solid #aaa;
+}
+
+.invoice table tfoot tr td:first-child {
+    border: none;
+}
+
+.invoice table tfoot tr:last-child td {
+    color: #5e72e4;
+    font-size: 1.4em;
+    border-top: 1px solid #5e72e4;
+}
+
+.invoice main .notices {
+    padding-left: 6px;
+    border-left: 6px solid #5e72e4;
+    background: #e7f2ff;
+    padding: 10px;
+}
+
+.invoice main .notices .notice {
+    font-size: 1.2em;
+}
+
+.invoice table tfoot tr td:first-child {
+    border: none;
+}
+
+.doc_img img {
+    width: 120px;
+    height: 120px;
+}
+
+
+/* Start image preview */
+
+.file-upload .image-box,
+.file-upload .file-box {
+    display: flex;
+    justify-content: center;
+    padding: 14px;
+    height: 130px;
+    width: 100%;
+    background: #efefef59;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid #ced4da;
+    /* border-radius: 5px; */
+    /* box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 10%); */
+}
+
+.file-upload .image-box:hover,
+.file-upload .file-box:hover {
+    content: "SElect";
+    background: #0a050552;
+    /* box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 12%); */
+}
+
+.file-upload .image-box img {
+    height: 100%;
+    display: block;
+}
+
+.file-upload .image-box img:hover {
+    height: 100%;
+    display: block;
+    opacity: 0.7;
+}
+
+.file-upload .image-box p {
+    position: relative;
+    top: 45%;
+    color: #fff;
+}
+
+.edit_prdImg {
+    background: #fff !important;
+    height: 202px !important;
+}
+
+
+/* End image preview */
+
+
+/* start Add multiple image */
+
+.upload__inputfile {
+    width: 100%;
+    height: 100%;
+    opacity: 99;
+    overflow: hidden;
+    /* position: absolute; */
+    z-index: 1;
+}
+
+.upload__btn {
+    display: inline-block;
+    font-weight: 600;
+    /* color: #fff; */
+    text-align: center;
+    min-width: 116px;
+    padding: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid;
+    border-radius: 10px;
+    line-height: 26px;
+    font-size: 14px;
+}
+
+.upload__btn p {
+    margin-bottom: 0;
+}
+
+.upload__btn:hover {
+    background-color: unset;
+    color: #4045ba;
+    transition: all 0.3s ease;
+}
+
+.upload__btn-box {
+    margin-bottom: 10px;
+}
+
+.upload__img-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.upload__img-box {
+    width: 200px;
+    padding: 0 10px;
+    margin-bottom: 12px;
+}
+
+.upload__img-close {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    line-height: 24px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.upload__img-close:after {
+    content: '\2716';
+    font-size: 14px;
+    color: white;
+}
+
+.img-bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 100%;
+}
+
+
+/* End Add multiple image */
+
+
+/* start Profile Page */
+
+.user-profile-header-banner img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 250px
+}
+
+.user-profile-header {
+    margin-top: -2rem
+}
+
+.user-profile-header .user-profile-img {
+    border: 5px solid;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.light-style .user-profile-header .user-profile-img {
+    border-color: #fff
+}
+
+.dark-style .user-profile-header .user-profile-img {
+    border-color: #2b2c40
+}
+
+.dataTables_wrapper .card-header .dataTables_filter label {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important
+}
+
+@media(max-width: 767.98px) {
+    .user-profile-header-banner img {
+        height: 150px
+    }
+    .user-profile-header .user-profile-img {
+        width: 100px
+    }
+}
+
+
+/* End Profile Page */
+
+#orderChart .apexcharts-tooltip,
+#orderChart .apexcharts-xcrosshairs {
+    display: none !important;
+}
+
+.bg-gradient-rainbow {
+    background: #00bfc8;
+    background-image: -webkit-radial-gradient(circle 248px at center, rgb(0, 242, 96), rgb(5, 117, 230));
+    background-image: radial-gradient(circle 248px at center, rgb(0, 242, 96), rgb(5, 117, 230));
+    border: 0px solid rgba(255, 255, 255, .125);
+}
+
+.bg-gradient-burning {
+    background: linear-gradient(to right, #ff416c, #ff4b2b)!important;
+}
+
+.bg-gradient-moonlit {
+    /* background: linear-gradient(to right, #0f2027, #203a43, #2c5364)!important; */
+    background-image: radial-gradient(circle 248px at center, #249292, #093535);
+}
+
+.bg-gradient-cosmic {
+    background: linear-gradient(to right, #8e2de2, #4a00e0)!important;
+}
+
+.card.bubble .card-body:before {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255 255 255 / 20%);
+    border-radius: 50%;
+    top: -10px;
+    right: -35px;
+}
+
+.card.bubble .card-body:after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255 255 255 / 20%);
+    border-radius: 50%;
+    top: 60px;
+    right: -20px;
+}
+
+.card.bubble .card-body i.bx {
+    font-size: 2rem;
+}
+
+.app-brand img {
+    width: 150px;
+}
+
+.layout-menu-collapsed .app-brand img {
+    width: 50px;
+}
+
+table.dataTable.table-striped>tbody>tr.even>* {
+    box-shadow: inset 0 0 0 9999px rgb(0 128 128 / 7%)
+}
+
+table.dataTable.table-striped>tbody>tr.odd>* {
+    box-shadow: none
+}
+
+table.dataTable.table-hover>tbody>tr:hover>* {
+    box-shadow: inset 0 0 0 9999px rgb(0 128 128 / 7%)
+}
+
+.table>thead {
+    vertical-align: bottom;
+    background: #008080;
+}
+
+.profile_tab li {
+    padding: 0 5px;
+}
+
+.product_table th {
+    color: #008080 !important
+}
+
+.height_set {
+    height: 335px;
+    overflow-y: auto;
+}
+
+input:read-only,
+input:read-only:focus {
+    background-color: #f4f5fb;
+}
+
+.product_img .prod_primary {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+.product_img .prod_other {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.product_des td {
+    border-width: 1px;
 }

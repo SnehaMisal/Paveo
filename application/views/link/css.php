@@ -1,7 +1,7 @@
 <meta name="description" content="" />
 <meta name="keywords" content="">
 <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="" />
+<link rel="icon" type="image/x-icon" href="<?php echo base_url() ?>assets/images/favicon_1.png" />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/quill/editor.css" />
 <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/bootstrap-select/bootstrap-select.css" /> -->
 
-<!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/select2/select2.css" /> -->
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/select2/select2.css" />
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/daterangepicker/daterangepicker.css" />
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/datatables/datatables.bundle.css" />
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/bootstrap4-toggle/bootstrap4-toggle.min.css" />
@@ -32,6 +32,7 @@
     href="<?php echo base_url() ?>assets/plugins/lightgallery/css/lightgallery.min.css">
 <!--dropify css  -->
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/plugins/dropify/css/dropify.css">
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/image_upload/imageuploadify.min.css">
 
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/core.css" />
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/demo.css" />
