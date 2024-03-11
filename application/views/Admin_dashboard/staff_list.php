@@ -78,7 +78,7 @@
                                                     <td class="text-nowrap">09 May 2020, 10:10AM</td>
                                                     <td>+91 9876543210</td>
                                                     <td>
-                                                        <a href="#" class="btn btn-icon btn-label-primary">
+                                                        <a href="<?php echo base_url('staff_roles') ?>" class="btn btn-icon btn-label-primary">
                                                             <i class='bx bx-task'></i>
                                                         </a>
                                                     </td>

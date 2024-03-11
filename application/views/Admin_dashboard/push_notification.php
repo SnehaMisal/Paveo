@@ -89,9 +89,8 @@
                                                             class="text-danger">*</span></label>
                                                 </div>
                                                 <div class="col-9">
-                                                    <div id="full-editor">
-                                                        <h6>Quill Rich Text Editor</h6>
-                                                    </div>
+                                                    <textarea id="summernote" class="summernote mb-0" name="example"
+                                                        required="required"></textarea>
                                                     <div class="invalid-feedback"> Please enter your Message.
                                                     </div>
                                                 </div>
@@ -110,13 +109,15 @@
                                         <div class="card-action-title">Sended Notification</div>
                                     </div>
                                     <div class="card-datatable table-responsive">
-                                        <table class="datatables-users table border-top table-hover table-striped" id="data_table">
+                                        <table class="datatables-users table border-top table-hover table-striped"
+                                            id="data_table">
                                             <thead>
                                                 <tr>
                                                     <th>SR NO</th>
                                                     <th>Date & Time</th>
                                                     <th>NOTIFICATION TYPE </th>
                                                     <th>Subject</th>
+                                                    <th>SEND TO</th>
                                                     <th>Message</th>
                                                     <th>Actions</th>
                                                 </tr>
@@ -128,14 +129,20 @@
                                                     <td><span class="badge bg-success">SMS</span></td>
                                                     <td>Notification Title</td>
                                                     <td>
+                                                        <button type="button" class="btn btn-sm btn-icon btn-warning"
+                                                            data-bs-toggle="modal" data-bs-target="#send_to">
+                                                            <i class='bx bx-fast-forward'></i>
+                                                        </button>
+                                                    </td>
+                                                    <td>
                                                         <button type="button" class="btn btn-sm btn-icon btn-secondary"
                                                             data-bs-toggle="modal" data-bs-target="#view_msg">
                                                             <i class='bx bx-message-square-dots'></i>
                                                         </button>
                                                     </td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-icon delete-record btn-danger" id="delete_1"
-                                                            onclick="delete_fun(this)"><i
+                                                        <button class="btn btn-sm btn-icon delete-record btn-danger"
+                                                            id="delete_1" onclick="delete_fun(this)"><i
                                                                 class="bx bx-trash"></i></button>
                                                     </td>
                                                 </tr>
@@ -146,15 +153,22 @@
                                                     <td>Notification Title</td>
                                                     <td>
                                                         <div class="d-inline-block text-nowrap">
-                                                            <button type="button" class="btn btn-sm btn-icon btn-secondary"
-                                                                data-bs-toggle="modal" data-bs-target="#view_msg">
-                                                                <i class='bx bx-message-square-dots'></i>
+                                                            <button type="button"
+                                                                class="btn btn-sm btn-icon btn-warning"
+                                                                data-bs-toggle="modal" data-bs-target="#send_to">
+                                                                <i class='bx bx-fast-forward'></i>
                                                             </button>
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-icon delete-record btn-danger" id="delete_2"
-                                                            onclick="delete_fun(this)"><i
+                                                        <button type="button" class="btn btn-sm btn-icon btn-secondary"
+                                                            data-bs-toggle="modal" data-bs-target="#view_msg">
+                                                            <i class='bx bx-message-square-dots'></i>
+                                                        </button>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-icon delete-record btn-danger"
+                                                            id="delete_2" onclick="delete_fun(this)"><i
                                                                 class="bx bx-trash"></i></button>
                                                     </td>
                                                 </tr>
@@ -168,15 +182,22 @@
                                                     <td>Notification Title</td>
                                                     <td>
                                                         <div class="d-inline-block text-nowrap">
-                                                            <button type="button" class="btn btn-sm btn-icon btn-secondary"
-                                                                data-bs-toggle="modal" data-bs-target="#view_msg">
-                                                                <i class='bx bx-message-square-dots'></i>
+                                                            <button type="button"
+                                                                class="btn btn-sm btn-icon btn-warning"
+                                                                data-bs-toggle="modal" data-bs-target="#send_to">
+                                                                <i class='bx bx-fast-forward'></i>
                                                             </button>
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-icon delete-record btn-danger" id="delete_3"
-                                                            onclick="delete_fun(this)"><i
+                                                        <button type="button" class="btn btn-sm btn-icon btn-secondary"
+                                                            data-bs-toggle="modal" data-bs-target="#view_msg">
+                                                            <i class='bx bx-message-square-dots'></i>
+                                                        </button>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-icon delete-record btn-danger"
+                                                            id="delete_3" onclick="delete_fun(this)"><i
                                                                 class="bx bx-trash"></i></button>
                                                     </td>
                                                 </tr>
@@ -222,23 +243,41 @@
         <!-- Drag Target Area To SlideIn Menu On Small Screens -->
         <div class="drag-target"></div>
     </div>
-        <!--View Massage Modal -->
-        <div class="modal fade  " id="view_msg" tabindex="-1" aria-hidden="true">
+    <!--View Massage Modal -->
+    <div class="modal fade  " id="view_msg" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <form action="" method="post" class="needs-validation" novalidate>
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel1">View Massage</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col mb-3">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit esse quasi, impedit suscipit praesentium alias maxime eveniet fugiat fuga aspernatur id dolore autem eum qui quis aliquam error repudiandae tenetur.</p>
-                            </div>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">View Massage</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col mb-3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit esse quasi, impedit suscipit
+                                praesentium alias maxime eveniet fugiat fuga aspernatur id dolore autem eum qui quis
+                                aliquam error repudiandae tenetur.</p>
                         </div>
                     </div>
-                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade  " id="send_to" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">Send To</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col mb-3">
+                            <h5>Wesley Burland</h5>
+                            <h5>Stu Delamaine</h5>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -271,39 +310,7 @@
         placeholder: "Select Send To"
     });
     </script>
-    <script>
-    new Quill("#full-editor", {
-        bounds: "#full-editor",
-        placeholder: "Type Something...",
-        modules: {
-            formula: !0,
-            toolbar: [
-                [{
-                    size: []
-                }],
-                ["bold", "italic", "underline", "strike"],
-                [{
-                    color: []
-                }, {
-                    background: []
-                }],
-                [{
-                    script: "super"
-                }, {
-                    script: "sub"
-                }],
-                ["code-block"],
-                [{
-                    list: "ordered"
-                }, {
-                    list: "bullet"
-                }],
-                ["link"]
-            ]
-        },
-        theme: "snow"
-    });
-    </script>
+
 </body>
 
 </html>

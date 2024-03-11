@@ -35,6 +35,9 @@
                                 <div class=" card">
                                     <div class="card-header header-elements">
                                         <div class="input-group  w-auto">
+                                        <p type="button" class="btn btn-md btn-primary mb-0"
+                                                onclick="exportexcel()">
+                                                Export </p>
                                             <input type="text" name="daterange" id="daterange" value=""
                                                 class="form-control w-auto">
                                             <button class="btn btn-md btn-primary" type="button">Go</button>
@@ -186,6 +189,57 @@
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <table class="datatables-users  d-none table border-top table-striped table-hover" id="excel_table">
+                                            <thead>
+                                                <tr>
+                                                    <th>SR NO</th>
+                                                    <th>Vendor</th>
+                                                    <th>Email Id</th>
+                                                    <th>Shop Name</th>
+                                                    <th>Joined Date</th>
+                                                    <th>Mobile Number</th>
+                                                    <th>Sales Name</th>
+                                                    <th>Order</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Wesley Burland</td>
+                                                    <td>wburlandj@uiuc.edu</td>
+                                                    <td><span class="fw-semibold">ABC Shop</span></td>
+                                                    <td class="text-nowrap">09 May 2020, 10:10AM</td>
+                                                    <td>+91 9876543210</td>
+                                                    <td>Travus Bruntjen</td>
+                                                    <td><span class="badge badge-center bg-label-primary">14</span></td>
+                                                    <td>Active</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Wesley Burland</td>
+                                                    <td>wburlandj@uiuc.edu</td>
+                                                    <td><span class="fw-semibold">PQR Shop</span></td>
+                                                    <td class="text-nowrap">09 May 2020, 10:10AM</td>
+                                                    <td>+91 9876543210</td>
+                                                    <td>Saunder Offner</td>
+                                                    <td><span class="badge badge-center bg-label-primary">10</span></td>
+                                                    <td>Deactive</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Wesley Burland</td>
+                                                    <td>wburlandj@uiuc.edu</td>
+                                                    <td><span class="fw-semibold">LMN Shop</span></td>
+                                                    <td class="text-nowrap">09 May 2020, 10:10AM</td>
+                                                    <td>+91 9876543210</td>
+                                                    <td>
+                                                        Jameson Lyster</td>
+                                                    <td><span class="badge badge-center bg-label-primary">8</span></td>
+                                                    <td>Active</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                     <nav aria-label="Page navigation" class="page_navigation">
                                         <ul class="pagination justify-content-end">
@@ -277,6 +331,18 @@
             }
         })
     };
+    </script>
+         <script type="text/javascript">
+    function exportexcel() {
+        $("#excel_table").table2excel({
+            exclude: ".noExl",
+            name: "Table2Excel",
+            filename: "Vendor_List",
+            exclude_img: true,
+            exclude_links: true,
+            exclude_inputs: false,
+        });
+    }
     </script>
 </body>
 

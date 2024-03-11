@@ -44,68 +44,69 @@
                                             <input type="text" class="form-control w-auto" placeholder="Search">
                                             <button type="button" class="btn btn-md btn-primary"><i
                                                     class="bx bx-search"></i></button>
+                                                    <p type="button" class="btn btn-md btn-primary mb-0" onclick="exportexcel()">
+                                            Export </p>
                                         </div>
                                     </div>
                                     <div class="card-datatable table-responsive">
-                                        <table class="datatables-users table border-top table-hover table-striped"
-                                            id="data_table">
+                                    <table class="datatables-users table border-top table-hover table-striped" id="data_table">
                                             <thead>
                                                 <tr>
                                                     <th>SR NO</th>
-                                                    <!-- <th>Date</th> -->
+                                                    <th>Date</th>
+                                                    <th>Product Sr No</th>
                                                     <th>Category Name</th>
+                                                    
                                                     <th>Product Name</th>
+                                                    <th>Sub-Product Name</th>
+                                                    <th>Size</th>
+                                                    <th>Color</th>
+                                                    <th>Add Stock</th>
                                                     <th>Total Stock</th>
-                                                    <th>Product Content Wise Stock</th>
-
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td>1</td>
-                                                    <!-- <td class="text-nowrap">09 May 2020, 10:10AM</td> -->
+                                                    <td class="text-nowrap">09 May 2020, 10:10AM</td>
+                                                    <td>8765</td>
                                                     <td>Shirts</td>
-                                                    <td><span class="fw-semibold text-primary">Summer Wear Shirt for
-                                                            Men</span></td>
+                                                    
+                                                    <td>Summer Wear Shirt for Men</td>
+                                                    <td><span class="fw-semibold text-primary">Sub-Product 1</span></td>
+                                                    <td>Medium</td>
+                                                    <td>Red</td>
+                                                    <td>20</td>
                                                     <td><span class="badge badge-center bg-primary">14</span></td>
-                                                    <td>
-                                                        <div class="d-inline-block text-nowrap">
-                                                            <a href="<?php echo base_url('product_wise_stock') ?>"
-                                                                class="btn btn-sm btn-icon btn-default"><i
-                                                                    class="bx bx-show"></i></a>
-                                                        </div>
-                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <!-- <td class="text-nowrap">20 May 2020, 10:10AM</td> -->
+                                                    <td class="text-nowrap">20 May 2020, 10:10AM</td>
+                                                    <td>8766</td>
                                                     <td>Jeans</td>
-                                                    <td><span class="fw-semibold text-primary">Ben Martin Men's Relaxed
-                                                            Fit
-                                                            Jeans</span></td>
-                                                    <td><span class="badge badge-center bg-primary">200</span></td>
-                                                    <td>
-                                                        <div class="d-inline-block text-nowrap">
-                                                            <a href="<?php echo base_url('product_wise_stock') ?>"
-                                                                class="btn btn-sm btn-icon btn-default"><i
-                                                                    class="bx bx-show"></i></a>
-                                                        </div>
-                                                    </td>
+                                                    
+                                                    <td>Ben Martin Men's Relaxed Fit
+                                                            Jeans</td>
+                                                    <td><span class="fw-semibold text-primary">Sub-Product 2</span></td>
+                                                    <td>Small</td>
+                                                    <td>Green</td>
+                                                    <td>20</td>
+                                                    
+                                                    <td><span class="badge badge-center bg-primary">200</span></td>   
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
-                                                    <!-- <td class="text-nowrap">13 May 2020, 10:10AM</td> -->
+                                                    <td class="text-nowrap">13 May 2020, 10:10AM</td>
+                                                    <td>8767</td>
                                                     <td>Shorts</td>
-                                                    <td><span class="fw-semibold text-primary">Peter England Men
-                                                            Blazer</span></td>
+                                                    
+                                                    <td>Peter England Men Blazer</td>
+                                                    <td><span class="fw-semibold text-primary">Sub-Product 3</span></td>
+                                                    <td>Small</td>
+                                                    <td>Grey</td>
+                                                    <td>20</td>
+                                                    
                                                     <td><span class="badge badge-center bg-primary">500</span></td>
-                                                    <td>
-                                                        <div class="d-inline-block text-nowrap">
-                                                            <a href="<?php echo base_url('product_wise_stock') ?>"
-                                                                class="btn btn-sm btn-icon btn-default"><i
-                                                                    class="bx bx-show"></i></a>
-                                                        </div>
-                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -159,54 +160,49 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
+                            <div class="col mb-3">
+                                <label for="" class="form-label">No. Of stock<span class="text-danger">*</span></label>
+                                <input type="text" id="" class="form-control" placeholder="Enter No. Of stock"
+                                    value="" required>
+                                <div class="invalid-feedback"> Please enter your No. Of stock. </div>
+                            </div>
                         <div class="col mb-3">
                             <label for="" class="form-label">Category Name <span class="text-danger">*</span></label>
-                            <select class="form-select cus_select" id="" required="" name="">
-                                <option selected="" disabled="" value="">Choose...</option>
-                                <option value="1">Shirts</option>
-                                <option value="2">Jeans </option>
-                                <option value="3">Shorts </option>
-                            </select>
-                            <div class="invalid-feedback"> Please enter your Category Name. </div>
+                            <input type="text" id="" class="form-control" placeholder="color" value="Shirts" 
+                                     required readonly>
                         </div>
+                        
                         <div class="col mb-3">
                             <label for="" class="form-label">Product Name <span class="text-danger">*</span></label>
-                            <select class="form-select cus_select" id="" required="" name="">
-                                <option selected="" disabled="" value="">Choose...</option>
-                                <option value="1">Summer Wear Shirt for Men</option>
-                                <option value="2">Ben Martin Men's Relaxed Fit Jeans </option>
-                                <option value="3">Peter England Men Blazer </option>
-                            </select>
-                            <div class="invalid-feedback"> Please enter your Product Name. </div>
+                            <input type="text" id="" class="form-control" placeholder="color" value="Summer Wear Shirt for Men" 
+                                     required readonly>
+                        </div>
+                        <div class="col mb-3">
+                            <label for="" class="form-label">Sub-Product Name <span class="text-danger">*</span></label>
+
+                            <input type="text" id="" class="form-control" placeholder="color" value="Summer Wear Shirt for Men" 
+                                    required readonly>
                         </div>
                         <div class="row">
-                            <div class="col  mb-3">
+                            <!-- <div class="col  mb-3">
                                 <label for="" class="form-label">Product Size<span class="text-danger">*</span></label>
-                                <select class="form-select cus_select" multiple id="" required="" name="">
-                                    <!-- <option selected="" disabled="" value="">Choose...</option> -->
-                                    <option value="1">S</option>
-                                    <option value="2">M</option>
-                                    <option value="3">L</option>
-                                </select>
+                                <input type="text" id="" class="form-control" placeholder="color" 
+                                    value="Small" required readonly>
                                 <div class="invalid-feedback"> Please enter your Product Size. </div>
-                            </div>
-                            <div class=" col mb-3">
-                                <label for="" class="form-label">Product Color<span class="text-danger">*</span></label>
-                                <select class="form-select cus_select" multiple id="" required="" name=""
-                                    placeholder="Product Color">
-                                    <!-- <option selected="" disabled="" value="">Choose...</option> -->
-                                    <option value="1">Red</option>
-                                    <option value="2">Green</option>
-                                    <option value="3">Grey</option>
-                                </select>
-                                <div class="invalid-feedback"> Please enter your Product Size. </div>
-                            </div>
+                            </div> -->
+                            
                         </div>
 
                         <div class="row">
+                        <div class=" col mb-3">
+                                <label for="" class="form-label">Product Color<span class="text-danger">*</span></label>
+                                <input type="text" id="" class="form-control" placeholder="color" value="Red" 
+                                    value="" required readonly>
+                                <div class="invalid-feedback"> Please enter your Product Size. </div>
+                            </div>
                             <div class="col mb-3">
                                 <label for="" class="form-label">No. Of stock<span class="text-danger">*</span></label>
-                                <input type="number" id="" class="form-control" placeholder="Enter No. Of stock"
+                                <input type="number" id="" class="form-control" placeholder="Enter No. Of pcs"
                                     value="" required>
                                 <div class="invalid-feedback"> Please enter your No. Of stock. </div>
                             </div>
@@ -252,6 +248,23 @@
         width: "100%",
         placeholder: "Select ",
     });
+    $('.prod_select').select2({
+        dropdownParent: $('#new_stock'),
+        width: "100%",
+        placeholder: "Select ",
+    });
+    </script>
+        <script type="text/javascript">
+    function exportexcel() {
+        $("#data_table").table2excel({
+            exclude: ".noExl",
+            name: "Table2Excel",
+            filename: "Stock Details",
+            exclude_img: true,
+            exclude_links: true,
+            exclude_inputs: false,
+        });
+    }
     </script>
 </body>
 

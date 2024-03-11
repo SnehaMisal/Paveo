@@ -1,7 +1,8 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo justify-content-center">
         <a href="<?php echo base_url('dashboard') ?>" class="app-brand-link">
-           <img src="<?php echo base_url() ?>assets/images/logo.png" alt="" width="150">
+           <img src="<?php echo base_url() ?>assets/images/logo.png" alt="" width="150" class="logo_fixed ">
+           <img src="<?php echo base_url() ?>assets/images/favicon.png" alt="" width="150" class="logo_collapse ">
         </a>
 
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
@@ -140,6 +141,13 @@
                 </li>
             </ul>
         </li>
+        <!-- Coupon Code -->
+        <li class="menu-item <?php if($x=="coupon_code"){ echo "active";}?>">
+            <a href="<?php echo base_url('coupon_code') ?>" class="menu-link ">
+                <i class="menu-icon tf-icons bx bx-receipt"></i>
+                Coupon Code
+            </a>
+        </li>
         <!-- Setting-->
         <li class="menu-item <?php if($y=="setting"){ echo "active open";}?>">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -152,16 +160,21 @@
                         Create Category
                     </a>
                 </li>
+                <li class="menu-item <?php if($x=="create_subcategory"){ echo "active";}?>">
+                    <a href="<?php echo base_url('create_subcategory') ?>" class="menu-link">
+                        Create Sub-Category
+                    </a>
+                </li>
                 <li class="menu-item <?php if($x=="create_size"){ echo "active";}?>">
                     <a href="<?php echo base_url('create_size') ?>" class="menu-link">
                         Create Size
                     </a>
                 </li>
-                <li class="menu-item <?php if($x=="create_color"){ echo "active";}?>">
+                <!-- <li class="menu-item <?php if($x=="create_color"){ echo "active";}?>">
                     <a href="<?php echo base_url('create_color') ?>" class="menu-link">
                         Create Color
                     </a>
-                </li>
+                </li> -->
             </ul>
         </li>
         <!-- Bill Management -->
@@ -192,7 +205,7 @@
                 </li>
                 <li class="menu-item <?php if($x=="stock_history"){ echo "active";}?>">
                     <a href="<?php echo base_url('stock_history') ?>" class="menu-link">
-                        Stock History
+                        Stock Count
                     </a>
                 </li>
             </ul>
@@ -216,11 +229,25 @@
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Apps &amp; Pages</span>
         </li>
+        <!-- Contact Us -->
+        <li class="menu-item <?php if($x=="contact_no"){ echo "active";}?>">
+            <a href="<?php echo base_url('contact_no') ?>" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-phone"></i>
+                 Contact No 
+            </a>
+        </li>
         <!-- About Us -->
         <li class="menu-item <?php if($x=="about_us"){ echo "active";}?>">
             <a href="<?php echo base_url('about_us') ?>" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-list-check"></i>
                 About Us
+            </a>
+        </li>
+        <!-- Top Banner -->
+        <li class="menu-item <?php if($x=="top_banner_management"){ echo "active";}?>">
+            <a href="<?php echo base_url('top_banner_management') ?>" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-image-add"></i>
+               Top Banner Management
             </a>
         </li>
         <!-- Banner Managment -->

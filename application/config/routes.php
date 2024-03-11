@@ -22,12 +22,14 @@ $route['dashboard'] = 'PageController/dashboard';
 
 
 $route['privacy_policy'] = 'PageController/privacy_policy';
+$route['contact_no'] = 'PageController/contact_no';
 $route['about_us'] = 'PageController/about_us';
 $route['term_condition'] = 'PageController/term_condition';
 $route['pending_approval'] = 'PageController/pending_approval';
 $route['vendor_list'] = 'PageController/vendor_list';
 $route['staff_list'] = 'PageController/staff_list';
 $route['create_category'] = 'PageController/create_category';
+$route['create_subcategory'] = 'PageController/create_subcategory';
 $route['create_size'] = 'PageController/create_size';
 $route['create_color'] = 'PageController/create_color';
 $route['add_product'] = 'PageController/add_product';
@@ -46,11 +48,12 @@ $route['stock_details'] = 'PageController/stock_details';
 $route['product_wise_stock'] = 'PageController/product_wise_stock';
 $route['bill_management'] = 'PageController/bill_management';
 $route['stock_history'] = 'PageController/stock_history';
-
+$route['coupon_code'] = 'PageController/coupon_code';
 $route['revenue_management'] = 'PageController/revenue_management';
 $route['push_notification'] = 'PageController/push_notification';
 $route['pending_vendor_profile'] = 'PageController/pending_vendor_profile';
 $route['banner_management'] = 'PageController/banner_management';
+$route['top_banner_management'] = 'PageController/top_banner_management';
 $route['vendor_profile'] = 'PageController/vendor_profile';
 $route['admin_profile'] = 'PageController/admin_profile';
 $route['add_staff'] = 'PageController/add_staff';
@@ -60,7 +63,7 @@ $route['vendor_new_order'] = 'PageController/vendor_new_order';
 $route['vendor_inprocess_order'] = 'PageController/vendor_inprocess_order';
 $route['vendor_completed_order'] = 'PageController/vendor_completed_order';
 $route['vendor_cancelled_order'] = 'PageController/vendor_cancelled_order';
-
+$route['staff_roles'] = 'PageController/staff_roles';
 
 // Sales Dashboard
 $route['sales_dashboard'] = 'SalesController/sales_dashboard';

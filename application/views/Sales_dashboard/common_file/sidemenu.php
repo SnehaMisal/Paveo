@@ -1,7 +1,8 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo justify-content-center">
         <a href="<?php echo base_url('sales_dashboard') ?>" class="app-brand-link">
-            <img src="<?php echo base_url() ?>assets/images/logo.png" alt="" width="150">
+        <img src="<?php echo base_url() ?>assets/images/logo.png" alt="" width="150" class="logo_fixed ">
+           <img src="<?php echo base_url() ?>assets/images/favicon.png" alt="" width="150" class="logo_collapse ">
         </a>
 
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">

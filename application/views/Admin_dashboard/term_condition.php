@@ -28,9 +28,9 @@
                 <div class="content-wrapper">
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <h4 class="fw-bold py-2 mb-2 text-primary">
-                        Terms & Conditions
+                            Terms & Conditions
                         </h4>
-                        <form action="" method="post">
+                        <form action="" method="post" class="needs-validation" novalidate>
                             <div class="card card-action mb-4 content_card">
                                 <div class="card-header">
                                     <div class="card-action-title">Update Terms & Conditions</div>
@@ -44,8 +44,8 @@
                                     </div> -->
                                 </div>
                                 <div class="card-body">
-                                    <div id="full-editor">
-                                        <h6>Quill Rich Text Editor</h6>
+                                    <textarea id="summernote" class="summernote mb-0" name="example"
+                                        required="required">
                                         <p> Cupcake ipsum dolor sit amet. Halvah cheesecake chocolate bar gummi bears
                                             cupcake. Pie macaroon bear claw. Soufflé I love candy canes I love cotton
                                             candy
@@ -58,7 +58,8 @@
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta consectetur perferendis, aliquam quasi et natus dolorem autem officia error aperiam modi, tempore animi iure! Odio iure veniam quod voluptatibus. Molestias.</p>
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque aliquid ab porro, adipisci praesentium, consectetur culpa ex magnam rerum, consequatur labore quibusdam iusto officia temporibus ipsum maxime quod sit autem.
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta consectetur perferendis, aliquam quasi et natus dolorem autem officia error aperiam modi, tempore animi iure! Odio iure veniam quod voluptatibus. Molestias.
-                                    </div>
+                                </textarea>
+                                <div class="invalid-feedback">Please Enter Terms and condition.</div>
                                 </div>
                                 <div class="card-footer text-center">
                                     <button type="submit" class="btn btn-default">Save Changes</button>
@@ -82,41 +83,12 @@
     </div>
     <?php $this->load->view('link/js'); ?>
     <script>
-    new Quill("#full-editor", {
-        bounds: "#full-editor",
-        placeholder: "Type Something...",
-        modules: {
-            formula: !0,
-            toolbar: [
-                [{
-                    size: []
-                }],
-                ["bold", "italic", "underline", "strike"],
-                [{
-                    color: []
-                }, {
-                    background: []
-                }],
-                [{
-                    script: "super"
-                }, {
-                    script: "sub"
-                }],
-                [{
-                    header: "1"
-                }, {
-                    header: "2"
-                }, "code-block"],
-                [{
-                    list: "ordered"
-                }, {
-                    list: "bullet"
-                }],
-                ["link"]
-            ]
-        },
-        theme: "snow"
-    });
+    $('.summernote').summernote({
+        height: 380,
+        minHeight: 380,
+        maxHeight: 380,
+        disableResizeEditor: true,
+    })
     </script>
 </body>
 

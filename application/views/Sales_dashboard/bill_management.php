@@ -34,7 +34,9 @@
                             <div class="col-md-12">
                                 <div class=" card">
                                     <div class="card-header header-elements">
-
+                                    <p type="button" class="btn btn-md btn-primary mb-0"
+                                                onclick="exportexcel()">
+                                                Export </p>
                                         <div class="card-header-elements ms-auto">
                                             <input type="text" class="form-control w-auto" placeholder="Search">
                                             <button type="button" class="btn btn-md btn-primary"><i
@@ -54,7 +56,7 @@
                                                     <th>Payment Type</th>
                                                     <th>Total Amount</th>
                                                     <th>Pending Amount</th>
-                                                    <th>Actions</th>
+                                                    <th class="noExl">Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -69,7 +71,7 @@
                                                     </td>
                                                     <td>10,000</td>
                                                     <td>5,000</td>
-                                                    <td>
+                                                    <td class="noExl">
                                                         <div class="d-inline-block text-nowrap">
                                                             <a href="<?php echo base_url('sales_vendor_order_details') ?>"
                                                                 class="btn btn-sm btn-icon btn-default"><i
@@ -90,7 +92,7 @@
                                                     <td>50,000</td>
                                                     <td>50,000</td>
                                                     
-                                                    <td>
+                                                    <td class="noExl">
                                                         <div class="d-inline-block text-nowrap">
                                                             <a href="<?php echo base_url('sales_vendor_order_details') ?>"
                                                                 class="btn btn-sm btn-icon btn-default"><i
@@ -111,7 +113,7 @@
                                                     <td>20,000</td>
                                                     <td>20,000</td>
                                                     
-                                                    <td>
+                                                    <td class="noExl">
                                                         <div class="d-inline-block text-nowrap">
                                                             <a href="<?php echo base_url('sales_vendor_order_details') ?>"
                                                                 class="btn btn-sm btn-icon btn-default"><i
@@ -248,6 +250,18 @@
             }
         })
     };
+    </script>
+         <script type="text/javascript">
+    function exportexcel() {
+        $("#data_table").table2excel({
+            exclude: ".noExl",
+            name: "Table2Excel",
+            filename: "Pending Bill",
+            exclude_img: true,
+            exclude_links: true,
+            exclude_inputs: false,
+        });
+    }
     </script>
 </body>
 

@@ -56,7 +56,9 @@
                                                     <th>Order Date</th>
                                                     <th>Vendor Name</th>
                                                     <th>Vendor Mobile</th>
-                                                    <th>Total Amount</th>
+                                                    <th >Amount</th>
+                                                    <th>Coupon</th>
+                                                    <th >Total Amount</th>
                                                     <th>Payment Status</th>
                                                     <th>Status</th>
                                                     <th>Actions</th>
@@ -68,21 +70,26 @@
                                                     <td>#PVO1</td>
                                                     <td class="text-nowrap">09 May 2020, 10:10AM</td>
                                                     <td><span class="fw-semibold text-primary">Francis Mitcham</span></td>
-                                                    <td>+91 9876543210</td>
-                                                    <td><i class='bx bx-rupee'></i> 2000</td>
+                                                    <td>9876543210</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 2000</td>
+                                                    <td>PAVEO23 (10% Off)</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 1800</td>
                                                     <td><span class="text-primary fw-semibold">Completed</span></td>
                                                     <td>
                                                         <select class="select2 form-select" id="" required="" name="">
                                                             <option value="1" data-icon="bx bx-revision" selected=""
                                                                 class="text-primary">Pending</option>
-                                                            <option value="2" data-icon="bx bx-check"
-                                                                class="text-success">Accepted </option>
-                                                            <option value="3" data-icon="bx bx-x" class="text-danger">
+                                                                <option value="2" data-icon="bx bx-revision" 
+                                                                class="text-primary">Accepted</option>
+                                                            <option value="3" data-icon="bx bx-check"
+                                                                class="text-success">Shipped </option>
+                                                            <option value="4" data-icon="bx bx-x" class="text-danger">
                                                                 Cancelled </option>
                                                         </select>
                                                     </td>
                                                     <td>
                                                     <div class="d-inline-block text-nowrap">
+                                                    
                                                             <a href="<?php echo base_url('order_details') ?>"
                                                                 class="btn btn-sm btn-icon btn-default"><i
                                                                     class="bx bx-show"></i></a>
@@ -98,20 +105,27 @@
                                                     <td>#PVO2</td>
                                                     <td class="text-nowrap">03 May 2020, 10:10AM</td>
                                                     <td><span class="fw-semibold text-primary">Angelica Ramos</span></td>
-                                                    <td>+91 9876543210</td>
-                                                    <td><i class='bx bx-rupee'></i> 12000</td>
+                                                    <td>9876543210</td>
+                                                    <td class="text-nowrap" ><i class='bx bx-rupee'></i> 12000</td>
+                                                    <td>PAVEO23 (10% Off)</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 1800</td>
                                                     <td><span class="text-danger fw-semibold">Pending</span></td>
                                                     <td>
-                                                        <select class="select2 form-select" id="" required="" name="">
-                                                            <option value="1" data-icon="bx bx-revision" selected="">
-                                                                Pending</option>
-                                                            <option value="2" data-icon="bx bx-check">Accepted </option>
-                                                            <option value="3" data-icon="bx bx-x">Cancelled </option>
+                                                    <select class="select2 form-select" id="" required="" name="">
+                                                            <option value="1" data-icon="bx bx-revision" selected=""
+                                                                class="text-primary">Pending</option>
+                                                                <option value="2" data-icon="bx bx-revision" 
+                                                                class="text-primary">Accepted</option>
+                                                            <option value="3" data-icon="bx bx-check"
+                                                                class="text-success">Shipped </option>
+                                                            <option value="4" data-icon="bx bx-x" class="text-danger">
+                                                                Cancelled </option>
                                                         </select>
                                                     </td>
                                                     <td>
                                                         <div class="d-inline-block text-nowrap">
-                                                        <a href="<?php echo base_url('order_details') ?>"
+                                                            
+                                                            <a href="<?php echo base_url('order_details') ?>"
                                                                 class="btn btn-sm btn-icon btn-default"><i
                                                                     class="bx bx-show"></i></a>
                                                             <button class="btn btn-sm btn-icon delete-record btn-danger"
@@ -125,20 +139,29 @@
                                                     <td>#PVO3</td>
                                                     <td class="text-nowrap">01 May 2020, 10:10AM</td>
                                                     <td><span class="fw-semibold text-primary">Airi Satou</span></td>
-                                                    <td>+91 9876543210</td>
-                                                    <td><i class='bx bx-rupee'></i> 5000</td>
+                                                    <td>9876543210</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 5000</td>
+                                                    <td>PAVEO23 (10% Off)</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 4700</td>
                                                     <td><span class="text-primary fw-semibold">Completed</span></td>
                                                     <td>
-                                                        <select class="select2 form-select" id="" required="" name="">
-                                                            <option value="1" data-icon="bx bx-revision" selected="">
-                                                                Pending</option>
-                                                            <option value="2" data-icon="bx bx-check">Accepted </option>
-                                                            <option value="3" data-icon="bx bx-x">Cancelled </option>
+                                                    <select class="select2 form-select" id="" required="" name="">
+                                                            <option value="1" data-icon="bx bx-revision" 
+                                                                class="text-primary">Pending</option>
+                                                                <option value="2" data-icon="bx bx-revision"  selected=""
+                                                                class="text-primary">Accepted</option>
+                                                            <option value="3" data-icon="bx bx-check"
+                                                                class="text-success">Shipped </option>
+                                                            <option value="4" data-icon="bx bx-x" class="text-danger">
+                                                                Cancelled </option>
                                                         </select>
                                                     </td>
                                                     <td>
                                                         <div class="d-inline-block text-nowrap">
-                                                        <a href="<?php echo base_url('order_details') ?>"
+                                                            <a href="<?php echo base_url('invoice') ?>"
+                                                                class="btn btn-sm btn-icon btn-primary"><i
+                                                                    class='bx bx-download'></i></a>
+                                                            <a href="<?php echo base_url('order_details') ?>"
                                                                 class="btn btn-sm btn-icon btn-default"><i
                                                                     class="bx bx-show"></i></a>
                                                             </button>

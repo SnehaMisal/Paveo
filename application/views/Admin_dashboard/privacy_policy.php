@@ -30,7 +30,7 @@
                         <h4 class="fw-bold py-2 mb-2 text-primary">
                             Privacy Policy
                         </h4>
-                        <form action="" method="post">
+                        <form action="" method="post" class="needs-validation" novalidate>
                             <div class="card card-action mb-4 content_card">
                                 <div class="card-header">
                                     <div class="card-action-title">Update Privacy Policy</div>
@@ -44,13 +44,11 @@
                                     </div> -->
                                 </div>
                                 <div class="card-body">
-                                    <div id="full-editor">
-                                        <h6>Quill Rich Text Editor</h6>
-                                        <p> Cupcake ipsum dolor sit amet. Halvah cheesecake chocolate bar gummi bears
-                                            cupcake. Pie macaroon bear claw. Soufflé I love candy canes I love cotton
-                                            candy
-                                            I love. </p>
-                                    </div>
+                                <textarea id="summernote" class="summernote mb-0" name="example"
+                                        required="required">
+                                                        Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi.
+                                    </textarea>
+                                    <div class="invalid-feedback">Please Enter Privacy Policy.</div>
                                 </div>
                                 <div class="card-footer text-center">
                                     <button type="submit" class="btn btn-default">Save Changes</button>
@@ -74,41 +72,12 @@
     </div>
     <?php $this->load->view('link/js'); ?>
     <script>
-    new Quill("#full-editor", {
-        bounds: "#full-editor",
-        placeholder: "Type Something...",
-        modules: {
-            formula: !0,
-            toolbar: [
-                [{
-                    size: []
-                }],
-                ["bold", "italic", "underline", "strike"],
-                [{
-                    color: []
-                }, {
-                    background: []
-                }],
-                [{
-                    script: "super"
-                }, {
-                    script: "sub"
-                }],
-                [{
-                    header: "1"
-                }, {
-                    header: "2"
-                }, "code-block"],
-                [{
-                    list: "ordered"
-                }, {
-                    list: "bullet"
-                }],
-                ["link"]
-            ]
-        },
-        theme: "snow"
-    });
+    $('.summernote').summernote({
+        height: 380,
+        minHeight: 380,
+        maxHeight: 380,
+        disableResizeEditor: true,
+    })
     </script>
 </body>
 

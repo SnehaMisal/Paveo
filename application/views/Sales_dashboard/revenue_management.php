@@ -35,6 +35,9 @@
                             <div class="col-md-12">
                                 <div class=" card">
                                     <div class="card-header header-elements">
+                                    <p type="button" class="btn btn-md btn-primary mb-0"
+                                                onclick="exportexcel()">
+                                                Export </p>
                                         <div class="input-group  w-auto">
                                             <input type="text" name="daterange" id="daterange" value=""
                                                 class="form-control w-auto">
@@ -57,7 +60,7 @@
                                                     <th>Total Amount</th>
                                                     <th>Transaction ID</th>
                                                     <th>Payment Mode</th>
-                                                    <th>Actions</th>
+                                                    <th class="noExl">Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -71,7 +74,7 @@
                                                     <td>
                                                         <span class="badge  bg-label-primary ">Online</span>
                                                     </td>
-                                                    <td>
+                                                    <td class="noExl">
                                                         <div class="d-inline-block text-nowrap">
                                                             <a href="<?php echo base_url('sales_vendor_order_details') ?>"
                                                                 class="btn btn-sm btn-icon btn-default"><i
@@ -91,7 +94,7 @@
                                                     <td>
                                                         <span class="badge  bg-label-warning ">COD</span>
                                                     </td>
-                                                    <td>
+                                                    <td class="noExl">
                                                         <div class="d-inline-block text-nowrap">
                                                         <a href="<?php echo base_url('sales_vendor_order_details') ?>"
                                                                 class="btn btn-sm btn-icon btn-default"><i
@@ -109,7 +112,7 @@
                                                     <td>
                                                         <span class="badge  bg-label-primary ">Online</span>
                                                     </td>
-                                                    <td>
+                                                    <td class="noExl">
                                                         <div class="d-inline-block text-nowrap">
                                                         <a href="<?php echo base_url('sales_vendor_order_details') ?>"
                                                                 class="btn btn-sm btn-icon btn-default"><i
@@ -303,6 +306,18 @@
         }, cb);
         cb(start, end);
     });
+    </script>
+         <script type="text/javascript">
+    function exportexcel() {
+        $("#data_table").table2excel({
+            exclude: ".noExl",
+            name: "Table2Excel",
+            filename: "Revenue_Report",
+            exclude_img: true,
+            exclude_links: true,
+            exclude_inputs: false,
+        });
+    }
     </script>
 </body>
 

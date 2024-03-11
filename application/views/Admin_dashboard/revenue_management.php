@@ -36,6 +36,9 @@
                                 <div class=" card">
                                     <div class="card-header header-elements">
                                         <div class="input-group  w-auto">
+                                            <p type="button" class="btn btn-md btn-primary mb-0"
+                                                onclick="exportexcel()">
+                                                Export </p>
                                             <input type="text" name="daterange" id="daterange" value=""
                                                 class="form-control w-auto">
                                             <button class="btn btn-md btn-primary" type="button">Go</button>
@@ -54,10 +57,12 @@
                                                     <th>Order Id</th>
                                                     <th>Payment Date</th>
                                                     <th>Vendor Name</th>
-                                                    <th>Total Amount</th>
+                                                    <th >Amount</th>
+                                                    <th>Coupon</th>
+                                                    <th >Total Amount</th>
                                                     <th>Transaction ID</th>
                                                     <th>Payment Mode</th>
-                                                    <th>Actions</th>
+                                                    <th class="noExl">Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -66,12 +71,14 @@
                                                     <td>#PVO1</td>
                                                     <td class="text-nowrap">09 May 2020, 10:10AM</td>
                                                     <td><span class="fw-semibold text-primary">Francis Mitcham</span></td>
-                                                    <td><i class='bx bx-rupee'></i> 2000</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 2000</td>
+                                                    <td>PAVEO23 (10% Off)</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 1800</td>
                                                     <td>#tnst18</td>
                                                     <td>
                                                         <span class="badge  bg-label-primary ">Online</span>
                                                     </td>
-                                                    <td>
+                                                    <td class="noExl">
                                                         <div class="d-inline-block text-nowrap">
                                                             <a href="<?php echo base_url('order_details') ?>"
                                                                 class="btn btn-sm btn-icon btn-default"><i
@@ -89,12 +96,14 @@
                                                     <td>#PVO2</td>
                                                     <td class="text-nowrap">03 May 2020, 10:10AM</td>
                                                     <td><span class="fw-semibold text-primary">Angelica Ramos</span></td>
-                                                    <td><i class='bx bx-rupee'></i> 12000</td>
+                                                    <td class="text-nowrap" ><i class='bx bx-rupee'></i> 12000</td>
+                                                    <td>PAVEO23 (10% Off)</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 1800</td>
                                                     <td>#tnst348</td>
                                                     <td>
                                                         <span class="badge  bg-label-warning ">COD</span>
                                                     </td>
-                                                    <td>
+                                                    <td class="noExl">
                                                         <div class="d-inline-block text-nowrap">
                                                         <a href="<?php echo base_url('order_details') ?>"
                                                                 class="btn btn-sm btn-icon btn-default"><i
@@ -110,12 +119,14 @@
                                                     <td>#PVO3</td>
                                                     <td class="text-nowrap">01 May 2020, 10:10AM</td>
                                                     <td><span class="fw-semibold text-primary">Airi Satou</span></td>
-                                                    <td><i class='bx bx-rupee'></i> 5000</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 5000</td>
+                                                    <td>PAVEO23 (10% Off)</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 4700</td>
                                                     <td>#tnst98</td>
                                                     <td>
                                                         <span class="badge  bg-label-primary ">Online</span>
                                                     </td>
-                                                    <td>
+                                                    <td class="noExl ">
                                                         <div class="d-inline-block text-nowrap">
                                                         <a href="<?php echo base_url('order_details') ?>"
                                                                 class="btn btn-sm btn-icon btn-default"><i
@@ -312,6 +323,18 @@
         }, cb);
         cb(start, end);
     });
+    </script>
+     <script type="text/javascript">
+    function exportexcel() {
+        $("#data_table").table2excel({
+            exclude: ".noExl",
+            name: "Table2Excel",
+            filename: "Revenue_Report",
+            exclude_img: true,
+            exclude_links: true,
+            exclude_inputs: false,
+        });
+    }
     </script>
 </body>
 

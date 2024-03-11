@@ -58,10 +58,12 @@
                                                     <th>Completed Date</th>
                                                     <th>Vendor Name</th>
                                                     <th>Vendor Mobile</th>
-                                                    <th>Total Amount</th>
+                                                    <th >Amount</th>
+                                                    <th>Coupon</th>
+                                                    <th >Total Amount</th>
                                                     <th>Payment Type</th>
                                                     <th>Payment Status</th>
-
+                                                    <th>Shipping Details</th>
                                                     <th>Actions</th>
                                                 </tr>
                                             </thead>
@@ -74,12 +76,18 @@
                                                     <td><span class="fw-semibold text-primary">Francis Mitcham</span>
                                                     </td>
                                                     <td>+91 9876543210</td>
-                                                    <td><i class='bx bx-rupee'></i> 2000</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 2000</td>
+                                                    <td>PAVEO23 (10% Off)</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 1800</td>
                                                     <td>
                                                         <span class="badge  bg-label-primary ">Online</span>
                                                     </td>
                                                     <td><span class="text-primary fw-semibold">Completed</span></td>
-
+                                                    <td>
+                                                        <button data-bs-toggle="modal" data-bs-target="#shipping_details"
+                                                                class="btn btn-sm btn-icon btn-default"><i
+                                                                    class="bx bx-show"></i></button>
+                                                    </td>
                                                     <td>
                                                         <div class="d-inline-block text-nowrap">
                                                             <a href="<?php echo base_url('invoice') ?>"
@@ -103,12 +111,18 @@
                                                     <td><span class="fw-semibold text-primary">Angelica Ramos</span>
                                                     </td>
                                                     <td>+91 9876543210</td>
-                                                    <td><i class='bx bx-rupee'></i> 12000</td>
+                                                    <td class="text-nowrap" ><i class='bx bx-rupee'></i> 12000</td>
+                                                    <td>PAVEO23 (10% Off)</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 1800</td>
                                                     <td>
                                                         <span class="badge  bg-label-warning ">COD</span>
                                                     </td>
                                                     <td><span class="text-danger fw-semibold">Pending</span></td>
-
+                                                    <td>
+                                                        <button data-bs-toggle="modal" data-bs-target="#shipping_details"
+                                                                class="btn btn-sm btn-icon btn-default"><i
+                                                                    class="bx bx-show"></i></button>
+                                                    </td>
                                                     <td>
                                                         <div class="d-inline-block text-nowrap">
                                                         <a href="<?php echo base_url('invoice') ?>"
@@ -131,12 +145,18 @@
                                                     <td class="text-nowrap">19 May 2020, 10:10AM</td>
                                                     <td><span class="fw-semibold text-primary">Airi Satou</span></td>
                                                     <td>+91 9876543210</td>
-                                                    <td><i class='bx bx-rupee'></i> 5000</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 5000</td>
+                                                    <td>PAVEO23 (10% Off)</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 4700</td>
                                                     <td>
                                                         <span class="badge  bg-label-primary ">Online</span>
                                                     </td>
                                                     <td><span class="text-primary fw-semibold">Completed</span></td>
-
+                                                    <td>
+                                                        <button data-bs-toggle="modal" data-bs-target="#shipping_details"
+                                                                class="btn btn-sm btn-icon btn-default"><i
+                                                                    class="bx bx-show"></i></button>
+                                                    </td>
                                                     <td>
                                                         <div class="d-inline-block text-nowrap">
                                                             <a href="<?php echo base_url('invoice') ?>"
@@ -194,78 +214,46 @@
         <!-- Drag Target Area To SlideIn Menu On Small Screens -->
         <div class="drag-target"></div>
     </div>
-    <!--Completed Order Modal -->
-    <div class="modal fade" id="create_category" tabindex="-1" aria-hidden="true">
+    <!--Shipping Details Modal -->
+    <!--Shipping Details Modal -->
+    <div class="modal fade" id="shipping_details" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <form action="" method="post" class="needs-validation" novalidate>
+                
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel1">Completed Order</h5>
+                        <h5 class="modal-title" id="exampleModalLabel1">Shipping Details</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="row">
                             <div class="col mb-3">
-                                <label for="" class="form-label">Category Name <span
-                                        class="text-danger">*</span></label>
-                                <input type="text" id="" class="form-control" placeholder="Enter Category Name" value=""
-                                    required>
-                                <div class="invalid-feedback"> Please enter your Category name. </div>
+                               <div class="details">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem praesentium qui, sed necessitatibus, quod veritatis cupiditate natus doloremque nulla fuga voluptatum in reprehenderit ex modi veniam deserunt. Eligendi, modi accusamus.
+                               </div>
                             </div>
                         </div>
                         <div class="row g-2">
-                            <div class="col mb-3">
-                                <label for="" class="form-label">Category Image <span
-                                        class="text-danger">*</span></label>
-                                <input type="file" id="" class="dropify" name="" data-default-file="" data-height="150"
-                                    required data-allowed-file-extensions="png jpg mp4" />
-                                <div class="invalid-feedback">Please Enter Category Image.</div>
+                            <div class="col mb-3 justify-content-center">
+                                <div class="details_img">
+                                <div class="product-box">
+                                                            <a href="<?php echo base_url() ?>assets/images/cat_shirt.png"
+                                                                data-exthumbimage="<?php echo base_url() ?>assets/images/cat_shirt.png"
+                                                                data-src="<?php echo base_url() ?>assets/images/cat_shirt.png"
+                                                                class=" mb-4">
+                                                                <img src="<?php echo base_url() ?>assets/images/cat_shirt.png"
+                                                                    class="img-thumbnail" alt="" />
+                                                            </a>
+                                                        </div>
+                                    <!-- <img src="<?php echo base_url() ?>assets/images/cat_shirt.png" alt="" > -->
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                       
                     </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!--Edit Category Modal -->
-    <div class="modal fade" id="edit_category" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <form action="" method="post" class="needs-validation" novalidate>
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel1">Edit Category</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col mb-3">
-                                <label for="" class="form-label">Category Name <span
-                                        class="text-danger">*</span></label>
-                                <input type="text" id="" class="form-control" placeholder="Enter Category Name"
-                                    value="Shirts" required>
-                                <div class="invalid-feedback"> Please enter your Category name. </div>
-                            </div>
-                        </div>
-                        <div class="row g-2">
-                            <div class="col mb-3">
-                                <label for="" class="form-label">Category Image <span
-                                        class="text-danger">*</span></label>
-                                <input type="file" id="" class="dropify" name=""
-                                    data-default-file="<?php echo base_url() ?>assets/images/cat_shirt.png"
-                                    data-height="150" required data-allowed-file-extensions="png jpg mp4" />
-                                <div class="invalid-feedback">Please Enter Category Image.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
-                    </div>
-                </form>
+                
             </div>
         </div>
     </div>

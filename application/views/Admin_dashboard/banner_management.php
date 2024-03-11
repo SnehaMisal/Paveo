@@ -47,11 +47,13 @@
                                         </div>
                                     </div>
                                     <div class="card-datatable table-responsive">
-                                        <table class="datatables-users table border-top table-hover table-striped" id="data_table">
+                                        <table class="datatables-users table border-top table-hover     "
+                                            id="data_table">
                                             <thead>
                                                 <tr>
                                                     <th>SR NO</th>
                                                     <th>Category Name</th>
+                                                    <th>Sub-Category Name</th>
                                                     <th>Title</th>
                                                     <th>Banner Image</th>
                                                     <th>Status</th>
@@ -62,6 +64,7 @@
                                                 <tr>
                                                     <td>1</td>
                                                     <td>Shirts</td>
+                                                    <td>Formal Shirts</td>
                                                     <td><span class="fw-semibold text-primary">Banner 1</span></td>
                                                     <td>
                                                         <div class="product-box">
@@ -83,15 +86,16 @@
                                                             data-bs-toggle="modal" data-bs-target="#edit_banner">
                                                             <i class="bx bx-edit"></i>
                                                         </button>
-                                                        <button class="btn btn-sm btn-icon delete-record btn-danger" id="delete_1"
-                                                            onclick="delete_fun(this)"><i
-                                                                class="bx bx-trash"></i></button>
-
+                                                        <button class="btn btn-sm btn-icon delete-record btn-danger"
+                                                            id="delete_1" onclick="delete_fun(this)">
+                                                            <i class="bx bx-trash"></i>
+                                                        </button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
                                                     <td>Jeans</td>
+                                                    <td>Formal Jeans</td>
                                                     <td><span class="fw-semibold text-primary">Banner 2</span></td>
                                                     <td>
                                                         <div class="product-box">
@@ -111,7 +115,8 @@
                                                     </td>
                                                     <td>
                                                         <div class="d-inline-block text-nowrap">
-                                                            <button type="button" class="btn btn-sm btn-icon btn-primary"
+                                                            <button type="button"
+                                                                class="btn btn-sm btn-icon btn-primary"
                                                                 data-bs-toggle="modal" data-bs-target="#edit_banner ">
                                                                 <i class="bx bx-edit"></i>
                                                             </button>
@@ -124,6 +129,7 @@
                                                 <tr>
                                                     <td>3</td>
                                                     <td>Shorts</td>
+                                                    <td>Sport Shorts</td>
                                                     <td><span class="fw-semibold text-primary">Banner 3</span></td>
                                                     <td>
                                                         <div class="product-box">
@@ -143,7 +149,8 @@
                                                     </td>
                                                     <td>
                                                         <div class="d-inline-block text-nowrap">
-                                                            <button type="button" class="btn btn-sm btn-icon btn-primary"
+                                                            <button type="button"
+                                                                class="btn btn-sm btn-icon btn-primary"
                                                                 data-bs-toggle="modal" data-bs-target="#edit_banner">
                                                                 <i class="bx bx-edit"></i>
                                                             </button>
@@ -207,7 +214,7 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="col mb-3">
-                                <label for="cat_name" class="form-label">Category Name <span
+                                <label for="" class="form-label">Category Name <span
                                         class="text-danger">*</span></label>
                                 <select class="form-select" id="cat_name" required="" name="">
                                     <option selected="" disabled="" value="">Choose...</option>
@@ -217,7 +224,18 @@
                                 </select>
                                 <div class="invalid-feedback"> Please enter your Category Name. </div>
                             </div>
-
+                        </div>
+                        <div class="row">
+                            <div class="col mb-3">
+                                <label for="" class="form-label">Sub-Category Name </label>
+                                <select class="form-select" id="subcat_name"  name="">
+                                    <option selected="" disabled="" value="">Choose...</option>
+                                    <option value="1">Formal Shirts</option>
+                                    <option value="2">Formal Jeans </option>
+                                    <option value="3">Sport Shorts </option>
+                                </select>
+                                <div class="invalid-feedback"> Please enter your Sub-Category Name. </div>
+                            </div>
                         </div>
                         <div class="row g-2">
                             <div class="col mb-3">
@@ -231,9 +249,9 @@
                             <div class="col mb-3">
                                 <label for="" class="form-label">Category Image <span
                                         class="text-danger">*</span></label>
-                                <input type="file" id="" class="dropify" name="" data-default-file="" data-height="150"
-                                    required data-allowed-file-extensions="png jpg mp4" />
-                                <div class="invalid-feedback">Please Enter Category Image.</div>
+                                <input type="file" id="dropify_img" class="dropify" name="" data-default-file=""
+                                    data-height="150" required data-allowed-file-extensions="png jpg mp4" />
+                                <div class="invalid-feedback" id="invalid-feedback">Please Enter Category Image.</div>
                             </div>
                         </div>
                     </div>
@@ -249,7 +267,7 @@
     <div class="modal fade" id="edit_banner" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-            <form action="" method="post" class="needs-validation" novalidate>
+                <form action="" method="post" class="needs-validation" novalidate>
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel1">Banner Management</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -259,21 +277,32 @@
                             <div class="col mb-3">
                                 <label for="cat_name" class="form-label">Category Name <span
                                         class="text-danger">*</span></label>
-                                <select class="form-select" id="cat_name" required="" name="">
-                                    <option  disabled="" value="">Choose...</option>
+                                <select class="form-select cat_name"  required="" name="">
+                                    <option disabled="" value="">Choose...</option>
                                     <option value="1" selected>Shirts</option>
                                     <option value="2">Jeans </option>
                                     <option value="3">Shorts </option>
                                 </select>
                                 <div class="invalid-feedback"> Please enter your Category Name. </div>
                             </div>
-
+                        </div>
+                        <div class="row">
+                            <div class="col mb-3">
+                                <label for="" class="form-label">Sub-Category Name </label>
+                                <select class="form-select subcat_name"  name="">
+                                    <option selected="" disabled="" value="">Choose...</option>
+                                    <option value="1" selected>Formal Shirts</option>
+                                    <option value="2">Formal Jeans </option>
+                                    <option value="3">Sport Shorts </option>
+                                </select>
+                                <div class="invalid-feedback"> Please enter your Sub-Category Name. </div>
+                            </div>
                         </div>
                         <div class="row g-2">
                             <div class="col mb-3">
                                 <label for="" class="form-label">Title<span class="text-danger">*</span></label>
-                                <input type="text" id="" class="form-control" placeholder="Enter Title name" value="Banner 1"
-                                    required>
+                                <input type="text" id="" class="form-control" placeholder="Enter Title name"
+                                    value="Banner 1" required>
                                 <div class="invalid-feedback"> Please enter your Title name. </div>
                             </div>
                         </div>
@@ -281,7 +310,7 @@
                             <div class="col mb-3">
                                 <label for="" class="form-label">Category Image <span
                                         class="text-danger">*</span></label>
-                                        <div class="control-group file-upload" id="file-upload1">
+                                <div class="control-group file-upload" id="file-upload1">
                                     <div class="image-box text-center">
                                         <img src="<?php echo base_url() ?>assets/images/cat_shirt.png" alt="img">
                                     </div>
@@ -305,6 +334,21 @@
     <script>
     $('#cat_name').select2({
         dropdownParent: $('#add_banner'),
+        minimumResultsForSearch: Infinity,
+        width: "100%",
+    });
+    $('#subcat_name').select2({
+        dropdownParent: $('#add_banner'),
+        minimumResultsForSearch: Infinity,
+        width: "100%",
+    });
+    $('.cat_name').select2({
+        dropdownParent: $('#edit_banner'),
+        minimumResultsForSearch: Infinity,
+        width: "100%",
+    });
+    $('.subcat_name').select2({
+        dropdownParent: $('#edit_banner'),
         minimumResultsForSearch: Infinity,
         width: "100%",
     });

@@ -17,6 +17,7 @@
     'use strict';
     window.addEventListener('load', function() {
         var forms = document.getElementsByClassName('needs-validation');
+        //console.log("forms", forms)
         var validation = Array.prototype.filter.call(forms, function(form) {
             form.addEventListener('submit', function(event) {
                 if (form.checkValidity() === false) {
@@ -28,6 +29,7 @@
         });
     }, false);
 })();
+
 $(document).ready(function() {
         // Datatable Js
         $('#data_table').DataTable({
@@ -68,6 +70,41 @@ $(document).ready(function() {
                     };
                     reader.readAsDataURL(this.files[0]);
                 });
+        });
+        $('.summernote').summernote({
+            toolbar: [
+                // [groupName, [list of button]]
+                ['style', ['bold', 'italic', 'underline']],
+                ['font', ['strikethrough', 'superscript', 'subscript']],
+                ['fontname', ['fontname']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol']],
+                ['view', ['codeview']],
+            ],
+            height: 180,
+            minHeight: 180,
+            maxHeight: 180,
+            disableResizeEditor: true,
+        });
+        $('form').submit(function(event) {
+            const file = $('#dropify_img').prop('files')[0];
+            if (file === undefined) {
+                $('#invalid-feedback').show();
+                event.preventDefault();
+            } else {
+                $('#invalid-feedback').hide();
+            }
+        });
+        $('#dropify_img').change(function() {
+            const file = $(this).prop('files')[0];
+            if (file === undefined) {
+                // Display the required message if no file selected
+                $('#invalid-feedback').show();
+            } else {
+                // Hide the required message if a file is selected
+                $('#invalid-feedback').hide();
+            }
         });
     })
     // Magnify Image

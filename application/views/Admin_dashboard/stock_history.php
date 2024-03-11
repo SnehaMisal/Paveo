@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    <title>Paveo | Inventory History</title>
+    <title>Paveo | Total Inventory </title>
     <?php $this->load->view('link/css'); ?>
 </head>
 
@@ -28,12 +28,14 @@
                 <div class="content-wrapper">
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <h4 class="fw-bold py-2 mb-2 text-primary">
-                            Inventory History
+                            Total Inventory
                         </h4>
                         <div class="row ">
                             <div class="col-md-12">
                                 <div class=" card">
                                     <div class="card-header header-elements">
+                                        <p type="button" class="btn btn-md btn-primary mb-0" onclick="exportexcel()">
+                                            Export </p>
                                         <!-- <div class="card-title-elements">
                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                                 data-bs-target="#new_stock">
@@ -47,52 +49,65 @@
                                         </div>
                                     </div>
                                     <div class="card-datatable table-responsive">
-                                        <table class="datatables-users table border-top table-hover table-striped" id="data_table">
+                                        <table class="datatables-users table border-top table-hover table-striped"
+                                            id="data_table">
                                             <thead>
                                                 <tr>
                                                     <th>SR NO</th>
-                                                    <th>Date</th>
+                                                    <!-- <th>Date</th> -->
                                                     <th>Category Name</th>
                                                     <th>Product Name</th>
-                                                    <th>Size</th>
-                                                    <th>Color</th>
-                                                    <th>Add Stock</th>
                                                     <th>Total Stock</th>
+                                                    <th class="noExl ">Product Content Wise Stock</th>
+
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td class="text-nowrap">09 May 2020, 10:10AM</td>
+                                                    <!-- <td class="text-nowrap">09 May 2020, 10:10AM</td> -->
                                                     <td>Shirts</td>
-                                                    <td><span class="fw-semibold text-primary">Summer Wear Shirt for Men</span></td>
-                                                    <td>Medium, Large</td>
-                                                    <td>Red,Green</td>
-                                                    <td>20</td>
+                                                    <td><span class="fw-semibold text-primary">Summer Wear Shirt for
+                                                            Men</span></td>
                                                     <td><span class="badge badge-center bg-primary">14</span></td>
+                                                    <td class="noExl ">
+                                                        <div class="d-inline-block text-nowrap">
+                                                            <a href="<?php echo base_url('product_wise_stock') ?>"
+                                                                class="btn btn-sm btn-icon btn-default"><i
+                                                                    class="bx bx-show"></i></a>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td class="text-nowrap">20 May 2020, 10:10AM</td>
+                                                    <!-- <td class="text-nowrap">20 May 2020, 10:10AM</td> -->
                                                     <td>Jeans</td>
-                                                    <td><span class="fw-semibold text-primary">Ben Martin Men's Relaxed Fit
+                                                    <td><span class="fw-semibold text-primary">Ben Martin Men's Relaxed
+                                                            Fit
                                                             Jeans</span></td>
-                                                    <td>Small</td>
-                                                    <td>Green,Grey</td>
-                                                    <td>20</td>
-                                                    
-                                                    <td><span class="badge badge-center bg-primary">200</span></td>   
+                                                    <td><span class="badge badge-center bg-primary">200</span></td>
+                                                    <td class="noExl ">
+                                                        <div class="d-inline-block text-nowrap">
+                                                            <a href="<?php echo base_url('product_wise_stock') ?>"
+                                                                class="btn btn-sm btn-icon btn-default"><i
+                                                                    class="bx bx-show"></i></a>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
-                                                    <td class="text-nowrap">13 May 2020, 10:10AM</td>
+                                                    <!-- <td class="text-nowrap">13 May 2020, 10:10AM</td> -->
                                                     <td>Shorts</td>
-                                                    <td><span class="fw-semibold text-primary">Peter England Men Blazer</span></td>
-                                                    <td>Small</td>
-                                                    <td>Grey</td>
-                                                    <td>20</td>
-                                                    
+                                                    <td><span class="fw-semibold text-primary">Peter England Men
+                                                            Blazer</span></td>
                                                     <td><span class="badge badge-center bg-primary">500</span></td>
+                                                    <td class="noExl ">
+                                                        <div class="d-inline-block text-nowrap">
+                                                            <a href="<?php echo base_url('product_wise_stock') ?>"
+                                                                class="btn btn-sm btn-icon btn-default"><i
+                                                                    class="bx bx-show"></i></a>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -167,6 +182,18 @@
         width: "100%",
         placeholder: "Select ",
     });
+    </script>
+    <script type="text/javascript">
+    function exportexcel() {
+        $("#data_table").table2excel({
+            exclude: ".noExl",
+            name: "Table2Excel",
+            filename: "Stock Details",
+            exclude_img: true,
+            exclude_links: true,
+            exclude_inputs: false,
+        });
+    }
     </script>
 </body>
 

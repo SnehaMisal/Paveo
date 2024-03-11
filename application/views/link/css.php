@@ -18,10 +18,10 @@
 <!-- Core CSS -->
 <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/bootstrap.min.css" class="template-customizer-core-css" /> -->
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/perfect-scrollbar/perfect-scrollbar.css" />
-<link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/quill/katex.css" />
-<link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/quill/editor.css" />
+<!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/quill/katex.css" />
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/quill/editor.css" /> -->
 <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/bootstrap-select/bootstrap-select.css" /> -->
-
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/summernote/summernote-lite.min.css" />
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/select2/select2.css" />
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/daterangepicker/daterangepicker.css" />
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/datatables/datatables.bundle.css" />
@@ -34,6 +34,9 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/plugins/dropify/css/dropify.css">
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/image_upload/imageuploadify.min.css">
 
+
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/OwlCarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/OwlCarousel/owl.theme.default.min.css">
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/core.css" />
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/demo.css" />
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/theme-default.css"

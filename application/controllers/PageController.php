@@ -52,7 +52,10 @@ class PageController extends CI_Controller
 	}
 
 
-
+	public function contact_no()
+	{
+		$this->load->view('Admin_dashboard/contact_no');
+	}
 
 
 	public function privacy_policy()
@@ -82,6 +85,10 @@ class PageController extends CI_Controller
 	public function create_category()
 	{
 		$this->load->view('Admin_dashboard/create_category');
+	}
+	public function create_subcategory()
+	{
+		$this->load->view('Admin_dashboard/create_subcategory');
 	}
 	public function create_size()
 	{
@@ -142,6 +149,10 @@ class PageController extends CI_Controller
 	{
 		$this->load->view('Admin_dashboard/product_wise_stock');
 	}
+	public function coupon_code()
+	{
+		$this->load->view('Admin_dashboard/coupon_code');
+	}
 	public function bill_management()
 	{
 		$this->load->view('Admin_dashboard/bill_management');
@@ -167,7 +178,10 @@ class PageController extends CI_Controller
 	{
 		$this->load->view('Admin_dashboard/banner_management');
 	}
-
+	public function top_banner_management()
+	{
+		$this->load->view('Admin_dashboard/top_banner_management');
+	}
 	public function admin_profile()
 	{
 		$this->load->view('Admin_dashboard/admin_profile');
@@ -175,6 +189,10 @@ class PageController extends CI_Controller
 	public function add_staff()
 	{
 		$this->load->view('Admin_dashboard/add_staff');
+	}
+	public function staff_roles()
+	{
+		$this->load->view('Admin_dashboard/staff_roles');
 	}
 	public function sales_staff_list()
 	{

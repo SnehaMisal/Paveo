@@ -87,10 +87,10 @@
                                                 
                                                 <div class="col mb-3">
                                                     <label for="" class="form-label">Profile Image</label>
-                                                    <input type="file" id="" class="dropify" name=""
+                                                    <input type="file" id="dropify_img" class="dropify" name=""
                                                         data-default-file="" data-height="190" 
                                                         data-allowed-file-extensions="png jpg jpeg" />
-                                                    <div class="invalid-feedback">Please Enter Profile Image.
+                                                    <div class="invalid-feedback" id="invalid-feedback">Please Enter Profile Image.
                                                     </div>
                                                 </div>
                                             </div>

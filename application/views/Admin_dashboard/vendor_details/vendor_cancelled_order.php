@@ -82,7 +82,9 @@
                                                     <th>Order Id</th>
                                                     <th>Order Date</th>
                                                     <th>Cancelled Date</th>
-                                                    <th>Total Amount</th>
+                                                    <th >Amount</th>
+                                                    <th>Coupon</th>
+                                                    <th >Total Amount</th>
                                                     <th>Payment Type</th>
                                                     <th>Payment Status</th>
                                                     <th>Cancelled By</th>
@@ -95,7 +97,9 @@
                                                     <td>#PVO1</td>
                                                     <td class="text-nowrap">09 May 2020, 10:10AM</td>
                                                     <td class="text-nowrap">20 May 2020, 10:10AM</td>
-                                                    <td><i class='bx bx-rupee'></i> 2000</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 2000</td>
+                                                    <td>PAVEO23 (10% Off)</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 1800</td>
                                                     <td>
                                                         <span class="badge  bg-label-primary ">Online</span>
                                                     </td>
@@ -115,7 +119,9 @@
                                                     <td>#PVO2</td>
                                                     <td class="text-nowrap">03 May 2020, 10:10AM</td>
                                                     <td class="text-nowrap">13 May 2020, 10:10AM</td>
-                                                    <td><i class='bx bx-rupee'></i> 12000</td>
+                                                    <td class="text-nowrap" ><i class='bx bx-rupee'></i> 12000</td>
+                                                    <td>PAVEO23 (10% Off)</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 1800</td>
                                                     <td>
                                                         <span class="badge  bg-label-warning ">COD</span>
                                                     </td>
@@ -135,7 +141,9 @@
                                                     <td>#PVO3</td>
                                                     <td class="text-nowrap">01 May 2020, 10:10AM</td>
                                                     <td class="text-nowrap">19 May 2020, 10:10AM</td>
-                                                    <td><i class='bx bx-rupee'></i> 5000</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 5000</td>
+                                                    <td>PAVEO23 (10% Off)</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 4700</td>
                                                     <td>
                                                         <span class="badge  bg-label-primary ">Online</span>
                                                     </td>

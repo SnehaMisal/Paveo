@@ -39,7 +39,8 @@
                                     <div class="row g-3 align-items-center">
                                         <div class="col-12 col-lg-4 col-md-6 me-auto">
                                             <h5 class="mb-1">Order Date: Tue, Apr 15, 2020, 8:44PM</h5>
-                                            <p class="mb-0">Order ID : #8965327</p>
+                                            <p class="mb-0">Order ID : <b> #8965327 </b></p>
+                                            <p class="mb-0">Sales Name : <b> Kare Skitterel</b></p>
                                         </div>
                                         <div class="col-12 col-lg-3 col-6 col-md-3">
                                             <p class="mb-1"><b>Payment Status: </b>Pending</p>
@@ -134,6 +135,8 @@
                                                                 <tr>
                                                                     <td>
                                                                         <div class="orderlist">
+                                                                            <p class="mb-0 product-title text-primary">
+                                                                                #865342 - Men White Polo T-shirt</p>
                                                                             <div
                                                                                 class="d-flex align-items-center gap-2">
                                                                                 <div class="product-box">
@@ -147,13 +150,14 @@
                                                                                     </a>
                                                                                 </div>
                                                                                 <div>
-                                                                                    <p
-                                                                                        class="mb-0 product-title text-primary">
-                                                                                        Men
-                                                                                        White Polo T-shirt</p>
-                                                                                    <small><b>Size: </b> Small, Medium
-                                                                                        <br><b>Color: </b>Green,
-                                                                                        Red, Yellow, Blue</small>
+
+                                                                                    <p class="mb-0 product-title ">
+                                                                                        <b> Men White Polo T-shirt </b>
+                                                                                    </p>
+                                                                                    <small>
+                                                                                        <b>Color: </b>Green <br>
+                                                                                        <b>Size: </b> Small,
+                                                                                        Medium</small>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -166,6 +170,10 @@
                                                                 <tr>
                                                                     <td>
                                                                         <div class="orderlist">
+                                                                            <p class="mb-0 product-title text-primary">
+                                                                                #987654 - Formal
+                                                                                Black Coat Pant
+                                                                            </p>
                                                                             <div
                                                                                 class="d-flex align-items-center gap-2">
                                                                                 <div class="product-box">
@@ -179,26 +187,30 @@
                                                                                     </a>
                                                                                 </div>
                                                                                 <div>
-                                                                                    <p
-                                                                                        class="mb-0 product-title text-primary">
-                                                                                        Formal
-                                                                                        Black Coat Pant
+                                                                                    <p class="mb-0 product-title">
+                                                                                        <b> Formal
+                                                                                            Black Coat Pant</b>
                                                                                     </p>
-                                                                                    <small><b>Size:
-                                                                                        </b>Small<br><b>Color:
-                                                                                        </b>Green</small>
+                                                                                    <small><b>Color:
+                                                                                        </b>Green<br>
+                                                                                        <b>Size:
+                                                                                        </b>Small</small>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </td>
                                                                     <td><i class='bx bx-rupee'></i>25.00</td>
-                                                                    <td>100 Pcs</td>
+                                                                    <td>100 Set</td>
                                                                     <td>15%</td>
                                                                     <td><i class='bx bx-rupee'></i>2500.00</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
                                                                         <div class="orderlist">
+                                                                        <p class="mb-0 product-title text-primary">
+                                                                                #987654 - Blue
+                                                                                        Shade Casual Jeans
+                                                                            </p>
                                                                             <div
                                                                                 class="d-flex align-items-center gap-2">
                                                                                 <div class="product-box">
@@ -213,13 +225,15 @@
                                                                                 </div>
                                                                                 <div>
                                                                                     <p
-                                                                                        class="mb-0 product-title text-primary">
-                                                                                        Blue
-                                                                                        Shade Casual Jeans
+                                                                                        class="mb-0 product-title ">
+                                                                                       <b> Blue
+                                                                                        Shade Casual Jeans</b>
                                                                                     </p>
-                                                                                    <small><b>Size: </b>Medium, Large
-                                                                                        <br><b>Color: </b>Yellow,
-                                                                                        Blue</small>
+                                                                                    <small>
+                                                                                        <b>Color: </b>Yellow,
+                                                                                        Blue<br>
+                                                                                        <b>Size: </b>Medium,
+                                                                                        Large</small>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -232,6 +246,10 @@
                                                                 <tr>
                                                                     <td>
                                                                         <div class="orderlist">
+                                                                        <p class="mb-0 product-title text-primary">
+                                                                                #987655 - Blue
+                                                                                        Shade Casual Jeans
+                                                                            </p>
                                                                             <div
                                                                                 class="d-flex align-items-center gap-2">
                                                                                 <div class="product-box">
@@ -246,18 +264,19 @@
                                                                                 </div>
                                                                                 <div>
                                                                                     <p
-                                                                                        class="mb-0 product-title text-primary">
-                                                                                        Yellow
-                                                                                        Winter Jacket for Men</p>
-                                                                                    <small><b>Size: </b>Small, Medium,
-                                                                                        Large<br><b>Color:
-                                                                                        </b>Yellow</small>
+                                                                                        class="mb-0 product-title ">
+                                                                                       <b> Yellow
+                                                                                        Winter Jacket for Men </b></p>
+                                                                                    <small><b>Color:
+                                                                                        </b>Yellow<br>
+                                                                                        <b>Size: </b>Small, Medium,
+                                                                                        Large</small>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </td>
                                                                     <td><i class='bx bx-rupee'></i>55.00</td>
-                                                                    <td>5 Pcs</td>
+                                                                    <td>5 Set</td>
                                                                     <td>30%</td>
                                                                     <td><i class='bx bx-rupee'></i>2,750.00</td>
                                                                 </tr>
@@ -292,7 +311,8 @@
                                                             <p class="mb-0">Shipping Price</p>
                                                         </div>
                                                         <div class="ms-auto">
-                                                            <h5 class="mb-0"><i class='bx bx-rupee'></i>0.00</h5>
+                                                            <h5 class="mb-0 text-success">+<i
+                                                                    class='bx bx-rupee'></i>0.00</h5>
                                                         </div>
                                                     </div>
                                                     <div class="d-flex align-items-center mb-3">
@@ -300,7 +320,20 @@
                                                             <p class="mb-0">Taxes</p>
                                                         </div>
                                                         <div class="ms-auto">
-                                                            <h5 class="mb-0"><i class='bx bx-rupee'></i>1,656.00</h5>
+                                                            <h5 class="mb-0 text-success">+<i
+                                                                    class='bx bx-rupee'></i>1,656.00</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <div>
+                                                            <p class="mb-0">Coupon <br>
+                                                                <small> (PAVEO23)</small>
+                                                            </p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <h5 class="mb-0 text-warning text-end">-<i
+                                                                    class='bx bx-rupee'></i>2,65.00 <br><small> (10%
+                                                                    Off)</small></h5>
                                                         </div>
                                                     </div>
                                                     <hr>

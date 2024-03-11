@@ -36,16 +36,41 @@
                                     <img src="<?php echo base_url() ?>assets/images/blazer.jpg"
                                         class="img-fluid prod_primary" alt="..." id="largeImage">
 
-                                    <div class="row mb-3 row-cols-auto g-2 justify-content-center mt-3">
-                                        <div class="col text-center"><img
-                                                src="<?php echo base_url() ?>assets/images/blazer.jpg" width="70"
-                                                class="border rounded cursor-pointer prod_other" alt=""></div>
-                                        <div class="col text-center"><img
-                                                src="<?php echo base_url() ?>assets/images/jeans.jpg" width="70"
-                                                class="border rounded cursor-pointer prod_other" alt=""></div>
-                                        <div class="col text-center"><img
-                                                src="<?php echo base_url() ?>assets/images/shirt.jpg" width="70"
-                                                class="border rounded cursor-pointer prod_other" alt=""></div>
+                                    <div class="row mb-3 row-cols-auto g-2 justify-content-center m-3">
+                                        <div class="owl-carousel owl-theme">
+                                            <div class="item">
+                                                <img src="<?php echo base_url() ?>assets/images/blazer.jpg" width="70"
+                                                    class="border rounded cursor-pointer prod_other" alt="">
+                                            </div>
+                                            <div class="item">
+                                                <img src="<?php echo base_url() ?>assets/images/jeans.jpg" width="70"
+                                                    class="border rounded cursor-pointer prod_other" alt="">
+                                            </div>
+                                            <div class="item">
+                                                <img src="<?php echo base_url() ?>assets/images/shirt.jpg" width="70"
+                                                    class="border rounded cursor-pointer prod_other" alt="">
+                                            </div>
+                                            <div class="item">
+                                                <img src="<?php echo base_url() ?>assets/images/blazer.jpg" width="70"
+                                                    class="border rounded cursor-pointer prod_other" alt="">
+                                            </div>
+                                            <!-- <div class="item">
+                                                <img src="<?php echo base_url() ?>assets/images/jeans.jpg" width="70"
+                                                    class="border rounded cursor-pointer prod_other" alt="">
+                                            </div>
+                                            <div class="item">
+                                                <img src="<?php echo base_url() ?>assets/images/shirt.jpg" width="70"
+                                                    class="border rounded cursor-pointer prod_other" alt="">
+                                            </div> -->
+                                            <!-- <div class="item">
+                                                <h4>4</h4>
+                                            </div> -->
+
+                                        </div>
+
+
+
+
                                         <!-- <div class="col text-center"><img
                                                 src="<?php echo base_url() ?>assets/images/blazer.jpg" width="70"
                                                 class="border rounded cursor-pointer prod_other" alt=""></div> -->
@@ -54,7 +79,12 @@
                                 <div class="col-md-8">
                                     <div class="card-body">
                                         <h4 class="card-title mb-0">Off-White Odsy-1000 Men Half T-Shirt</h4>
-                                        <div class="d-flex gap-3 py-3">
+                                        <div class="py-2">
+                                            <span class="text-muted">Sr. NO.</span>
+                                            <span class="price h4">#6886764</span>
+                                            
+                                        </div>
+                                        <div class="d-flex gap-3 py-2">
 
                                             <div>Summer Wear Shirt for Men</div>
                                         </div>
@@ -71,7 +101,14 @@
                                             <dd class="col-sm-9">:10 Pcs</dd>
                                         </dl>
                                         <hr>
-                                        <div class="row row-cols-auto ">
+                                        <div class="d-flex gap-3 py-2">
+
+                                            <div>
+                                                <h4>Product Discription</h4>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aperiam, totam aspernatur error minima pariatur reprehenderit autem neque, sit, eveniet alias illum quis. Iste consectetur odio quasi voluptatum at. Illum.</p>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="row row-cols-auto ">
                                             <div class="col">
                                                 <label class="form-label fw-bold">Size</label>
                                                 <div class="d-flex prod_box">
@@ -105,7 +142,7 @@
 
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -124,33 +161,147 @@
                                     </li>
 
                                 </ul> -->
-                                <div class="tab-content pt-3">
-                                    <div class="table-responsive">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="table-responsive">
+                                            <table class="border table align-middle mb-0 product_des">
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan="2">Product Details</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Type</td>
+                                                        <td>Slim Fit</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Neck</td>
+                                                        <td>Polo</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sleeve Type</td>
+                                                        <td>Full Sleeve</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Fabric</td>
+                                                        <td>160 GMS</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
                                         <table class="border table align-middle mb-0 product_des">
                                             <thead>
-                                                <tr >
-                                                    <th colspan="2">Product Details</th>
+                                                <tr>
+                                                    <th colspan="3">Size Chart</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Type</td>
-                                                    <td>Slim Fit</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Neck</td>
-                                                    <td>Polo</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Sleeve Type</td>
-                                                    <td>Full Sleeve</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Fabric</td>
-                                                    <td>160 GMS</td>
-                                                </tr>
-                                            </tbody>
+
                                         </table>
+                                        <div class="table-responsive">
+                                            <table class="border table align-middle mb-0 product_des">
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Size</td>
+                                                        <td>Chest</td>
+                                                        <td>Shoulder</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>S</td>
+                                                        <td>38</td>
+                                                        <td>17</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>M</td>
+                                                        <td>40</td>
+                                                        <td>17</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>L</td>
+                                                        <td>42</td>
+                                                        <td>17</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-body ">
+                                                <div class="row align-items-center ">
+                                                    <div class="col-md-4">
+                                                        <div class="product-box">
+                                                            <a href="<?php echo base_url() ?>assets/images/jeans.jpg"
+                                                                data-exthumbimage="<?php echo base_url() ?>assets/images/jeans.jpg"
+                                                                data-src="<?php echo base_url() ?>assets/images/jeans.jpg"
+                                                                class=" mb-4">
+                                                                <img src="<?php echo base_url() ?>assets/images/jeans.jpg"
+                                                                    class="img-thumbnail" alt="" style=" width:75px; height:75px"/>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 info">
+                                                        <h6 class="mb-2">Product_Name </h6>
+                                                        <p class="mb-1">Color: Red</p>
+                                                        <p class="mb-1">Size: Small, Medium, Large</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-body ">
+                                                <div class="row align-items-center ">
+                                                    <div class="col-md-4">
+                                                        <div class="product-box">
+                                                            <a href="<?php echo base_url() ?>assets/images/jeans.jpg"
+                                                                data-exthumbimage="<?php echo base_url() ?>assets/images/jeans.jpg"
+                                                                data-src="<?php echo base_url() ?>assets/images/jeans.jpg"
+                                                                class=" mb-4">
+                                                                <img src="<?php echo base_url() ?>assets/images/jeans.jpg"
+                                                                    class="img-thumbnail" alt="" style=" width:75px; height:75px"/>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 info">
+                                                        <h6 class="mb-2">Product_Name </h6>
+                                                        <p class="mb-1">Color: Green</p>
+                                                        <p class="mb-1">Size: Small, Medium, Large</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-body ">
+                                                <div class="row align-items-center ">
+                                                    <div class="col-md-4">
+                                                        <div class="product-box">
+                                                            <a href="<?php echo base_url() ?>assets/images/jeans.jpg"
+                                                                data-exthumbimage="<?php echo base_url() ?>assets/images/jeans.jpg"
+                                                                data-src="<?php echo base_url() ?>assets/images/jeans.jpg"
+                                                                class=" mb-4">
+                                                                <img src="<?php echo base_url() ?>assets/images/jeans.jpg"
+                                                                    class="img-thumbnail" alt="" style=" width:75px; height:75px"/>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 info">
+                                                        <h6 class="mb-2">Product_Name </h6>
+                                                        <p class="mb-1">Color: Black</p>
+                                                        <p class="mb-1">Size: Small, Medium, Large</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -177,6 +328,33 @@
         $('#largeImage').attr('src', $(this).attr('src').replace('thumb', 'large'));
         // $('#description').html($(this).attr('alt'));
     });
+    </script>
+    <script>
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 5,
+        items: 4,
+        nav: true,
+        dots: false,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 3,
+                nav: true,
+                loop: false
+            },
+            600: {
+                items: 3,
+                nav: false,
+                loop: false
+            },
+            1000: {
+                items: 4,
+                nav: true,
+                loop: false
+            }
+        }
+    })
     </script>
 
 </body>

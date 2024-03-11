@@ -78,6 +78,7 @@
                                                 <table class="table border-top m-0">
                                                     <thead>
                                                         <tr>
+                                                            <th>SR NO</th>
                                                             <th>Item</th>
                                                             <th>Cost</th>
                                                             <th>Qty</th>
@@ -86,33 +87,37 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
+                                                            <td>8765</td>
                                                             <td>Men White Polo T-shirt</td>
                                                             <td><i class="bx bx-rupee"></i>32</td>
                                                             <td>1</td>
                                                             <td><i class="bx bx-rupee"></i>32.00</td>
                                                         </tr>
                                                         <tr>
+                                                        <td>8766</td>
                                                             <td>Formal Black Coat Pant</td>
                                                             <td><i class="bx bx-rupee"></i>22</td>
                                                             <td>1</td>
                                                             <td><i class="bx bx-rupee"></i>22.00</td>
                                                         </tr>
                                                         <tr>
+                                                        <td>8767</td>
                                                             <td>Blue Shade Jeans</td>
                                                             <td><i class="bx bx-rupee"></i>17</td>
                                                             <td>2</td>
                                                             <td><i class="bx bx-rupee"></i>34.00</td>
                                                         </tr>
                                                         <tr>
+                                                        <td>8768</td>
                                                             <td>Yellow  Winter Jacket for Men</td>
                                                             <td><i class="bx bx-rupee"></i>66</td>
                                                             <td>1</td>
                                                             <td><i class="bx bx-rupee"></i>66.00</td>
                                                         </tr>
                                                         <tr>
-                                                            <td colspan="3" class="text-end px-4 py-3">
+                                                            <td colspan="4" class="text-end px-4 py-3">
                                                                 <p class="mb-2">Subtotal:</p>
-                                                                <p class="mb-2">Discount:</p>
+                                                                <p class="mb-2">Discount (10%):</p>
                                                                 <p class="mb-2">Tax:</p>
                                                                 <p class="mb-0">Total:</p>
                                                             </td>

@@ -13,7 +13,7 @@
 <body>
     <?php
     $y="inventory_management";
-    $x="stock_details";
+    $x="stock_history";
     $z="";
     ?>
     <div class="layout-wrapper layout-content-navbar  ">
@@ -41,6 +41,8 @@
                                             <input type="text" class="form-control w-auto" placeholder="Search">
                                             <button type="button" class="btn btn-md btn-primary"><i
                                                     class="bx bx-search"></i></button>
+                                                    <p type="button" class="btn btn-md btn-primary mb-0" onclick="exportexcel()">
+                                            Export </p>
                                         </div>
                                     </div>
                                     <div class="card-datatable table-responsive">
@@ -208,6 +210,18 @@
             }
         })
     };
+    </script>
+            <script type="text/javascript">
+    function exportexcel() {
+        $("#data_table").table2excel({
+            exclude: ".noExl",
+            name: "Table2Excel",
+            filename: "Stock Details",
+            exclude_img: true,
+            exclude_links: true,
+            exclude_inputs: false,
+        });
+    }
     </script>
 </body>
 

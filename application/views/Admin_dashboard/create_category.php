@@ -215,9 +215,9 @@
                             <div class="col mb-3">
                                 <label for="" class="form-label">Category Image <span
                                         class="text-danger">*</span></label>
-                                <input type="file" id="" class="dropify" name="" data-default-file="" data-height="150"
-                                    required data-allowed-file-extensions="png jpg mp4" />
-                                <div class="invalid-feedback">Please Enter Category Image.</div>
+                                <input type="file" id="dropify_img" class="dropify" name="" data-default-file="" data-height="150"
+                                    required data-allowed-file-extensions="png jpg jpeg" />
+                                <div class="invalid-feedback" id="invalid-feedback">Please Enter Category Image.</div>
                             </div>
                         </div>
                     </div>

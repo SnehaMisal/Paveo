@@ -34,7 +34,9 @@
                             <div class="col-md-12">
                                 <div class=" card">
                                     <div class="card-header header-elements">
-
+                                    <p type="button" class="btn btn-md btn-primary mb-0"
+                                                onclick="exportexcel()">
+                                                Export </p>
                                         <div class="card-header-elements ms-auto">
                                             <input type="text" class="form-control w-auto" placeholder="Search">
                                             <button type="button" class="btn btn-md btn-primary"><i
@@ -54,8 +56,8 @@
                                                     <th>Payment Type</th>
                                                     <th>Total Amount</th>
                                                     <th>Pending Amount</th>
-                                                    <th>Payment Status</th>
-                                                    <th>Actions</th>
+                                                    <th class="noExl">Payment Status</th>
+                                                    <th class="noExl">Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -70,13 +72,13 @@
                                                     </td>
                                                     <td>10,000</td>
                                                     <td>5,000</td>
-                                                    <td>
+                                                    <td class="noExl">
                                                         <button type="button" class="btn btn-default"
                                                             data-bs-toggle="modal" data-bs-target="#paid_payment">
                                                             <i class="bx bx-plus"></i> Payment
                                                         </button>
                                                     </td>
-                                                    <td>
+                                                    <td class="noExl">
                                                         <div class="d-inline-block text-nowrap">
                                                         <a href="<?php echo base_url('invoice') ?>"
                                                                 class="btn btn-sm btn-icon btn-primary"><i
@@ -99,13 +101,13 @@
                                                     </td>
                                                     <td>50,000</td>
                                                     <td>50,000</td>
-                                                    <td>
+                                                    <td class="noExl">
                                                         <button type="button" class="btn btn-default"
                                                             data-bs-toggle="modal" data-bs-target="#paid_payment">
                                                             <i class="bx bx-plus"></i> Payment
                                                         </button>
                                                     </td>
-                                                    <td>
+                                                    <td class="noExl">
                                                         <div class="d-inline-block text-nowrap">
                                                         <a href="<?php echo base_url('invoice') ?>"
                                                                 class="btn btn-sm btn-icon btn-primary"><i
@@ -128,13 +130,13 @@
                                                     </td>
                                                     <td>20,000</td>
                                                     <td>20,000</td>
-                                                    <td>
+                                                    <td class="noExl">
                                                         <button type="button" class="btn btn-default"
                                                             data-bs-toggle="modal" data-bs-target="#paid_payment">
                                                             <i class="bx bx-plus"></i> Payment
                                                         </button>
                                                     </td>
-                                                    <td>
+                                                    <td class="noExl">
                                                         <div class="d-inline-block text-nowrap">
                                                         <a href="<?php echo base_url('invoice') ?>"
                                                                 class="btn btn-sm btn-icon btn-primary"><i
@@ -274,6 +276,18 @@
             }
         })
     };
+    </script>
+         <script type="text/javascript">
+    function exportexcel() {
+        $("#data_table").table2excel({
+            exclude: ".noExl",
+            name: "Table2Excel",
+            filename: "Pending Bill",
+            exclude_img: true,
+            exclude_links: true,
+            exclude_inputs: false,
+        });
+    }
     </script>
 </body>
 

@@ -51,7 +51,7 @@
                                             <thead>
                                                 <tr>
                                                     <th>SR NO</th>
-                                                    <th>Category Name</th>
+                                                    <!-- <th>Category Name</th> -->
                                                     <th>Size Name</th>
                                                     <th>Status</th>
                                                     <th>Actions</th>
@@ -60,7 +60,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>Shirts</td>
+                                                    <!-- <td>Shirts</td> -->
                                                     <td><span class="fw-semibold text-primary">Small</span></td>
                                                     <td><input type="checkbox" checked data-toggle="toggle"
                                                             data-on="Active" data-off="Deactive" data-onstyle="success"
@@ -79,7 +79,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td>Jeans</td>
+                                                    <!-- <td>Jeans</td> -->
                                                     <td><span class="fw-semibold text-primary">Medium</span></td>
                                                     <td>
                                                         <input type="checkbox" data-toggle="toggle" data-on="Active"
@@ -100,7 +100,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
-                                                    <td>Shorts</td>
+                                                    <!-- <td>Shorts</td> -->
                                                     <td><span class="fw-semibold text-primary">Large</span></td>
                                                     <td>
                                                         <input type="checkbox" checked data-toggle="toggle"
@@ -171,7 +171,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="col mb-3">
+                        <!-- <div class="col mb-3">
                             <label for="" class="form-label">Category Name <span class="text-danger">*</span></label>
                             <select class="form-select select2" id="" required="" name="">
                                 <option selected="" disabled="" value="">Choose...</option>
@@ -180,7 +180,7 @@
                                 <option value="3">Shorts </option>
                             </select>
                             <div class="invalid-feedback"> Please enter your Category Name. </div>
-                        </div>
+                        </div> -->
                         <div class="row">
                             <div class="col mb-3">
                                 <label for="" class="form-label">Size Name <span class="text-danger">*</span></label>
@@ -208,7 +208,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col mb-3">
                                 <label for="" class="form-label">Category Name <span
                                         class="text-danger">*</span></label>
@@ -220,7 +220,7 @@
                                 </select>
                                 <div class="invalid-feedback"> Please enter your Category Name. </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="row">
                             <div class="col mb-3">
                                 <label for="" class="form-label">Size Name <span class="text-danger">*</span></label>

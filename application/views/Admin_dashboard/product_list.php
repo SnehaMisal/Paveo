@@ -34,7 +34,10 @@
                             <div class="col-md-12">
                                 <div class=" card">
                                     <div class="card-header header-elements">
+                                    <!-- <p type="button" class="btn btn-md btn-primary mb-0" onclick="exportexcel()">
+                                            Export </p> -->
                                         <div class="input-group  w-auto">
+                                            
                                             <input type="text" name="daterange" id="daterange" value=""
                                                 class="form-control w-auto">
                                             <button class="btn btn-md btn-primary" type="button">Go</button>
@@ -52,10 +55,13 @@
                                                 <tr>
                                                     <th>SR NO</th>
                                                     <th>Category Name</th>
+                                                    <th>Sub-Category Name</th>
+                                                    <th>Sr. No.</th>
                                                     <th>Product Name</th>
                                                     <th>Image</th>
                                                     <th>Price</th>
                                                     <th>Margin</th>
+                                                    <th>Pcs in 1 Set</th>
                                                     <th>Status</th>
                                                     <th>Actions</th>
                                                 </tr>
@@ -64,8 +70,11 @@
                                                 <tr>
                                                     <td>1</td>
                                                     <td>Shirts</td>
+                                                    <td>Formal Shirts</td>
+                                                    <td>85643</td>
                                                     <td><span class="fw-semibold text-primary">Summer Wear Shirt for
                                                             Men</span></td>
+                                                            
                                                     <td>
                                                         <div class="product-box">
                                                             <a href="<?php echo base_url() ?>assets/images/shirt.jpg"
@@ -79,6 +88,7 @@
                                                     </td>
                                                     <td>1,999</td>
                                                     <td>86%</td>
+                                                    <td>10</td>
                                                     <td>
                                                         <input type="checkbox" checked data-toggle="toggle"
                                                             data-on="Active" data-off="Deactive" data-onstyle="success"
@@ -101,9 +111,12 @@
                                                 <tr>
                                                     <td>2</td>
                                                     <td>Jeans</td>
+                                                    <td>Formal Jeans</td>
+                                                    <td>85644</td>
                                                     <td><span class="fw-semibold text-primary">Ben Martin Men's Relaxed
                                                             Fit
                                                             Jeans</span></td>
+                                                            
                                                     <td>
                                                         <div class="product-box">
                                                             <a href="<?php echo base_url() ?>assets/images/jeans.jpg"
@@ -117,12 +130,13 @@
                                                     </td>
                                                     <td>2,499</td>
                                                     <td>75%</td>
-                                                    <td>
+                                                    <td>10</td>
+                                                    <td class="noExl">
                                                         <input type="checkbox" checked data-toggle="toggle"
                                                             data-on="Active" data-off="Deactive" data-onstyle="success"
                                                             data-offstyle="danger" data-size="sm">
                                                     </td>
-                                                    <td>
+                                                    <td class="noExl">
                                                         <div class="d-inline-block text-nowrap">
                                                         <a href="<?php echo base_url('product_details') ?>"
                                                                 class="btn btn-sm btn-icon btn-default"><i
@@ -139,8 +153,11 @@
                                                 <tr>
                                                     <td>3</td>
                                                     <td>Suits & Blazers</td>
+                                                    <td>Formal Suits & Blazers</td>
+                                                    <td>85645</td>
                                                     <td><span class="fw-semibold text-primary">Peter England Men
                                                             Blazer</span></td>
+                                                            
                                                     <td>
                                                         <div class="product-box">
                                                             <a href="<?php echo base_url() ?>assets/images/blazer.jpg"
@@ -154,12 +171,13 @@
                                                     </td>
                                                     <td>2,499</td>
                                                     <td>75%</td>
-                                                    <td>
+                                                    <td>10</td>
+                                                    <td class="noExl">
                                                         <input type="checkbox" checked data-toggle="toggle"
                                                             data-on="Active" data-off="Deactive" data-onstyle="success"
                                                             data-offstyle="danger" data-size="sm">
                                                     </td>
-                                                    <td>
+                                                    <td class="noExl">
                                                         <div class="d-inline-block text-nowrap">
                                                         <a href="<?php echo base_url('product_details') ?>"
                                                                 class="btn btn-sm btn-icon btn-default"><i
@@ -243,6 +261,18 @@
         }, cb);
         cb(start, end);
     });
+    </script>
+                <script type="text/javascript">
+    function exportexcel() {
+        $("#data_table").table2excel({
+            exclude: ".noExl",
+            name: "Table2Excel",
+            filename: "Product List",
+            exclude_img: false,
+            exclude_links: true,
+            exclude_inputs: false,
+        });
+    }
     </script>
 </body>
 

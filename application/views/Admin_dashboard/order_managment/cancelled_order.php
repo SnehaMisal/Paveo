@@ -59,7 +59,9 @@
                                                     <th>Cancelled Date</th>
                                                     <th>Vendor Name</th>
                                                     <th>Vendor Mobile</th>
-                                                    <th>Total Amount</th>
+                                                    <th >Amount</th>
+                                                    <th>Coupon</th>
+                                                    <th >Total Amount</th>
                                                     <th>Payment Type</th>
                                                     <th>Payment Status</th>
                                                     <th>Cancelled By</th>
@@ -74,7 +76,9 @@
                                                     <td class="text-nowrap">20 May 2020, 10:10AM</td>
                                                     <td><span class="fw-semibold text-primary">Francis Mitcham</span></td>
                                                     <td>+91 9876543210</td>
-                                                    <td><i class='bx bx-rupee'></i> 2000</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 2000</td>
+                                                    <td>PAVEO23 (10% Off)</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 1800</td>
                                                     <td>
                                                         <span class="badge  bg-label-primary ">Online</span>
                                                     </td>
@@ -99,7 +103,9 @@
                                                     <td class="text-nowrap">13 May 2020, 10:10AM</td>
                                                     <td><span class="fw-semibold text-primary">Angelica Ramos</span></td>
                                                     <td>+91 9876543210</td>
-                                                    <td><i class='bx bx-rupee'></i> 12000</td>
+                                                    <td class="text-nowrap" ><i class='bx bx-rupee'></i> 12000</td>
+                                                    <td>PAVEO23 (10% Off)</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 1800</td>
                                                     <td>
                                                         <span class="badge  bg-label-warning ">COD</span>
                                                     </td>
@@ -124,7 +130,9 @@
                                                     <td class="text-nowrap">19 May 2020, 10:10AM</td>
                                                     <td><span class="fw-semibold text-primary">Airi Satou</span></td>
                                                     <td>+91 9876543210</td>
-                                                    <td><i class='bx bx-rupee'></i> 5000</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 5000</td>
+                                                    <td>PAVEO23 (10% Off)</td>
+                                                    <td class="text-nowrap"><i class='bx bx-rupee'></i> 4700</td>
                                                     <td>
                                                         <span class="badge  bg-label-primary ">Online</span>
                                                     </td>

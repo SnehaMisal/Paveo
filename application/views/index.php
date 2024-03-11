@@ -67,6 +67,7 @@
                                 <small>Forgot Password?</small>
                             </a>
                         </div>
+                        <a href="<?php echo base_url('dashboard') ?>"></a>
                         <button class="btn btn-default d-grid w-100">
                             Sign in
                         </button>
